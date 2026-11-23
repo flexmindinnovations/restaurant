@@ -200,6 +200,10 @@ Every value below is generated from `packages/design-tokens/src`. CSS custom pro
 | `size.control.xl` | `56px` | Staff mobile primary actions, checkout CTA. |
 | `size.touch.min` | `44px` | Minimum hit target on any touch device. |
 | `size.touch.staff` | `48px` | Minimum hit target in the staff app (gloves, speed). |
+| `size.layout.sidebar` | `264px` | Web admin sidebar, expanded (≥ 1240px). |
+| `size.layout.sidebar-collapsed` | `72px` | Web admin navigation rail (905–1239px). |
+| `size.layout.top-bar` | `64px` | Web admin top bar height. |
+| `size.layout.bottom-nav` | `72px` | Mobile bottom navigation height, excluding the safe area. |
 | `size.icon.xs` | `12px` |  |
 | `size.icon.sm` | `16px` |  |
 | `size.icon.md` | `20px` | Default in dense web UI. |

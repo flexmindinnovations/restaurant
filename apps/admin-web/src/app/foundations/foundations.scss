@@ -1,0 +1,162 @@
+:host {
+  display: grid;
+  gap: var(--dosa-space-10);
+}
+
+.intro {
+  display: grid;
+  gap: var(--dosa-space-2);
+  max-width: 64ch;
+
+  h1,
+  p {
+    margin: 0;
+  }
+}
+
+.block {
+  display: grid;
+  gap: var(--dosa-space-4);
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--dosa-space-3);
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--dosa-space-4);
+}
+
+.grid--inputs {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+.grid--metrics {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+}
+
+.is-destructive {
+  --mat-button-filled-container-color: var(--dosa-color-action-destructive-bg);
+  --mat-button-filled-label-text-color: var(--dosa-color-action-destructive-fg);
+}
+
+[matPrefix] {
+  margin-inline: var(--dosa-space-3) var(--dosa-space-2);
+  color: var(--dosa-color-icon-secondary);
+}
+
+.field-error {
+  color: var(--dosa-color-status-error-fg);
+}
+
+// Status badge (COMPONENT_GUIDELINES §5.4–5.5): icon + label + order colour, never colour alone.
+.badges {
+  list-style: none;
+}
+
+.badge {
+  --_tone: var(--dosa-color-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dosa-space-1);
+  height: calc(var(--dosa-space-5) + var(--dosa-space-0-5)); // 22px badge, COMPONENT_GUIDELINES §5.4
+  padding-inline: var(--dosa-space-2);
+  border-radius: var(--dosa-radius-full);
+  color: var(--_tone);
+  background: color-mix(in srgb, var(--_tone) 12%, transparent);
+  box-shadow: inset 0 0 0 var(--dosa-border-width-hairline) color-mix(in srgb, var(--_tone) 32%, transparent);
+
+  @each $state in received, accepted, preparing, ready, served, cancelled, delayed {
+    &[data-state='#{$state}'] {
+      --_tone: var(--dosa-color-order-#{$state});
+    }
+  }
+}
+
+.badge--live {
+  --_tone: var(--dosa-color-status-success-fg);
+}
+
+.metric {
+  display: grid;
+  gap: var(--dosa-space-1);
+  padding: var(--dosa-space-5);
+
+  p {
+    margin: 0;
+  }
+}
+
+.metric__value {
+  color: var(--dosa-color-text-primary);
+}
+
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dosa-space-1);
+  color: var(--dosa-color-status-success-fg);
+}
+
+.delta--down {
+  color: var(--dosa-color-status-error-fg);
+}
+
+.split {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  align-items: stretch;
+}
+
+.insight {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: var(--dosa-space-3);
+  padding: var(--dosa-space-8);
+
+  h2,
+  p {
+    margin: 0;
+  }
+}
+
+.insight__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dosa-space-2);
+  color: var(--dosa-color-text-brand);
+}
+
+.empty {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: var(--dosa-space-3);
+  padding: var(--dosa-space-12) var(--dosa-space-6);
+  text-align: center;
+
+  h2,
+  p {
+    margin: 0;
+    max-width: 36ch;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

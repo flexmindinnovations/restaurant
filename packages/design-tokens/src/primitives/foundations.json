@@ -64,6 +64,12 @@
       "min": { "$value": "44px", "$description": "Minimum hit target on any touch device." },
       "staff": { "$value": "48px", "$description": "Minimum hit target in the staff app (gloves, speed)." }
     },
+    "layout": {
+      "sidebar": { "$value": "264px", "$description": "Web admin sidebar, expanded (≥ 1240px)." },
+      "sidebar-collapsed": { "$value": "72px", "$description": "Web admin navigation rail (905–1239px)." },
+      "top-bar": { "$value": "64px", "$description": "Web admin top bar height." },
+      "bottom-nav": { "$value": "72px", "$description": "Mobile bottom navigation height, excluding the safe area." }
+    },
     "icon": {
       "xs": { "$value": "12px" },
       "sm": { "$value": "16px" },

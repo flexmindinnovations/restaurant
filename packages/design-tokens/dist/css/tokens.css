@@ -138,6 +138,10 @@
   --dosa-size-control-xl: 56px;
   --dosa-size-touch-min: 44px;
   --dosa-size-touch-staff: 48px;
+  --dosa-size-layout-sidebar: 264px;
+  --dosa-size-layout-sidebar-collapsed: 72px;
+  --dosa-size-layout-top-bar: 64px;
+  --dosa-size-layout-bottom-nav: 72px;
   --dosa-size-icon-xs: 12px;
   --dosa-size-icon-sm: 16px;
   --dosa-size-icon-md: 20px;

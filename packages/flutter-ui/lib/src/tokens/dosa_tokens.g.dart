@@ -163,6 +163,14 @@ abstract final class DosaSize {
   static const double touchMin = 44.0;
   /// Minimum hit target in the staff app (gloves, speed).
   static const double touchStaff = 48.0;
+  /// Web admin sidebar, expanded (≥ 1240px).
+  static const double layoutSidebar = 264.0;
+  /// Web admin navigation rail (905–1239px).
+  static const double layoutSidebarCollapsed = 72.0;
+  /// Web admin top bar height.
+  static const double layoutTopBar = 64.0;
+  /// Mobile bottom navigation height, excluding the safe area.
+  static const double layoutBottomNav = 72.0;
   static const double iconXs = 12.0;
   static const double iconSm = 16.0;
   /// Default in dense web UI.
