@@ -57,7 +57,7 @@ primitive change reviewed against [BRAND_GUIDELINES.md](BRAND_GUIDELINES.md).
    (`white @ 8–16%`), not through shadows alone.
 3. Accent colours step **lighter** (violet.400, mint.300 for text) to keep ≥ 4.5:1.
 4. Filled primary buttons keep `violet.650` with white text in every theme (5.37:1).
-5. Live video (CCTV) tiles sit on `surface.primary` with a 1px `border.subtle`; overlays on video
+5. Live video (CCTV) tiles sit on `surface.primary` with a 1px `color.border.subtle`; overlays on video
    use Dark Glass with ≥ 4.5:1 text.
 
 ## 4. Choosing the theme per surface

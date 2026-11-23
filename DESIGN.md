@@ -113,7 +113,7 @@ hex sits exactly inside its ramp. Key derived steps: `violet.650 #6857D5`, `viol
 | `primary` | `#6857D5` / `#5C4AC3` / `#4530A0` (all themes) | `#FFFFFF` | One main action per view |
 | `secondary` | `#E9E9FF` / `#D6D6FF` / `#BFBEFF` (dark: violet.500 @ 18/26/34%) | `#4530A0` (dark `#D6D6FF`) | Tonal secondary action |
 | `tertiary` | transparent + state layers | `color.text.brand` | Text buttons |
-| `neutral` | surface + `border.default` | `color.text.primary` | Outlined / cancel |
+| `neutral` | surface + `color.border.default` | `color.text.primary` | Outlined / cancel |
 | `destructive` | `#A14230` / `#802918` / `#600E00` | `#FFFFFF` | Delete, void, refund |
 | `highlight` | `#E9A23B` / `#C9871E` / `#A96B00` | `#202039` | Customer "Add to order", promos |
 
@@ -127,7 +127,7 @@ hex sits exactly inside its ramp. Key derived steps: `violet.650 #6857D5`, `viol
 | info | `#1D60A3` / `#93C0F3` | `#E9F9FF` | `#1D60A3` / `#68A2E3` |
 | neutral | Slate family | Cloud | ink.600 |
 
-Plus `color.live` (Mint dot) and `color.critical` (Coral, used for CCTV and kitchen alarms).
+Plus `color.status.live` (Mint dot) and `color.status.critical` (Coral, used for CCTV and kitchen alarms).
 
 **Order lifecycle** (`color.order.*`, same hue family in every theme, always with icon + label):
 

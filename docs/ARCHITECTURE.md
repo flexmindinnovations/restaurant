@@ -51,7 +51,7 @@ dosa/
 │   ├── flutter-ui/           Dart package `dosa_ui`: generated tokens + native glass/grain/theme
 │   └── documentation/        Static visual specimen (proves tokens, glass, grain, motion render)
 ├── backend/
-│   └── api/                  Placeholder + plan for NestJS (no business logic in this phase)
+│   └── api/                  NestJS + PostgreSQL plan (README only; no code in this phase)
 ├── design/                   Design-source material: brand, foundations, components, references
 ├── docs/                     The written system (guidelines, setup, roadmap, token reference)
 ├── scripts/                  Workspace scripts (Flutter asset sync, Flutter raw-colour lint)

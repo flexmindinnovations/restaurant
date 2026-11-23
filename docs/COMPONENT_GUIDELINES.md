@@ -63,7 +63,7 @@ rows, dialogs' content area, toasts or metric cards in a grid.
 | **Primary** | `action.primary.bg` (violet.650) | `bg-hover` | `bg-active` | `action.primary.fg` | none | One per view region: the main commit action |
 | **Secondary** (tonal) | `action.secondary.bg` | `bg-hover` | `bg-active` | `action.secondary.fg` | none | Supporting actions beside a primary |
 | **Tertiary** (text) | transparent | `action.tertiary.bg-hover` | `bg-active` | `action.tertiary.fg` | none | Low-emphasis, inline, toolbars |
-| **Neutral / outline** | `action.neutral.bg` | `bg-hover` | `bg-active` | `action.neutral.fg` | 1px `border.default` | Cancel, filters, secondary in dense UI |
+| **Neutral / outline** | `action.neutral.bg` | `bg-hover` | `bg-active` | `action.neutral.fg` | 1px `color.border.default` | Cancel, filters, secondary in dense UI |
 | **Destructive** | `action.destructive.bg` | `bg-hover` | `bg-active` | `action.destructive.fg` | none | Irreversible actions; always confirm |
 | **Highlight** (customer) | `action.highlight.bg` (Saffron) | `bg-hover` | `bg-active` | `action.highlight.fg` (ink) | none | "Add to order", checkout CTA in customer app only |
 
@@ -92,14 +92,14 @@ Customer app: "View cart" extended FAB with item count (tabular). Never more tha
 ### 2.1 Text input
 | Property | Spec |
 |---|---|
-| Container | height 40 (web) / 48 (mobile); radius `sm`; fill `surface.primary`; border 1px `border.default` |
+| Container | height 40 (web) / 48 (mobile); radius `sm`; fill `surface.primary`; border 1px `color.border.default` |
 | Padding | 12 horizontal (web) / 16 (mobile); 8 between icon and text |
 | Label | above the field, `label.md`, `text.primary`; 6px gap; required marked with "(required)" text, not just `*` |
 | Value | `body.md` (web) / `body.lg` (mobile); numeric inputs use `numeric.md` (tabular) and right-align in tables |
 | Placeholder | `text.tertiary`; example values only, never instructions |
 | Helper | `body.sm`, `text.secondary`, 4px below |
-| Hover | border `border.strong` |
-| Focus | border 1.5px `border.brand` + focus ring |
+| Hover | border `color.border.strong` |
+| Focus | border 1.5px `color.border.brand` + focus ring |
 | Error | border `status.error.fg`; helper replaced by error message with `alert-circle` icon; `aria-invalid`, `aria-describedby` |
 | Disabled | fill `state.disabled-bg`, text `state.disabled-fg`, border `state.disabled-border` |
 | Read-only | no border, fill `surface.secondary`, selectable text |
@@ -123,21 +123,21 @@ Flutter `DropdownMenu` themed with tokens.
 
 ### 2.4 Selectors (chips)
 Filter/choice chips: height 32, radius `full`, padding 12, `label.sm`. Rest: `action.neutral.bg`,
-1px `border.default`. Selected: `state.selected-bg`, 1px `border.brand`, leading `check` 16.
+1px `color.border.default`. Selected: `state.selected-bg`, 1px `color.border.brand`, leading `check` 16.
 Multi-select rows scroll horizontally on mobile with 16 edge padding.
 
 ### 2.5 Checkbox
-18×18 box, radius `xs` (4), 1.5px `border.strong`. Checked/indeterminate: fill
+18×18 box, radius `xs` (4), 1.5px `color.border.strong`. Checked/indeterminate: fill
 `action.primary.bg`, white glyph (2px stroke), tick draw 80ms. Hit target 40 (web) / 48 (mobile).
 Label `body.md`, 8 gap. Disabled uses disabled tokens. Error: border `status.error.fg`.
 
 ### 2.6 Radio button
-20×20 circle, 1.5px `border.strong`; selected: 2px `border.brand` ring + 10px `action.primary.bg`
+20×20 circle, 1.5px `color.border.strong`; selected: 2px `color.border.brand` ring + 10px `action.primary.bg`
 dot (scale-in 120ms). Group in `fieldset` with legend; arrow keys move selection.
 
 ### 2.7 Switch
 Track 36×20 (web) / 52×32 (mobile), radius `full`. Off: track `surface.sunken`, 1px
-`border.default`, thumb white with `shadow.1`. On: track `action.primary.bg`, thumb white with
+`color.border.default`, thumb white with `shadow.1`. On: track `action.primary.bg`, thumb white with
 `check` 12. Thumb travel 160ms `standard`. Use only for instant-apply settings; label states the
 effect ("Accept online orders"). `role="switch"` + `aria-checked`.
 
@@ -182,7 +182,7 @@ returns to the trigger. Mobile uses a bottom sheet (§5.3).
 ## 4. Content containers
 
 ### 4.1 Card
-`surface.primary`, radius `md` (12), border 1px `border.subtle`, `shadow.1` (optional on canvas),
+`surface.primary`, radius `md` (12), border 1px `color.border.subtle`, `shadow.1` (optional on canvas),
 padding 16 (web) / 16 (mobile), 24 for spacious cards. Title `heading.h3` or `h5` (dense).
 Interactive cards: hover `shadow.2` + translateY −2px (web only), press scale 0.98, focus ring
 around the whole card; the whole card is one link/button. Never nest cards more than one level.
@@ -282,10 +282,10 @@ filters), all-done (positive), error (retry). Never blame the user.
 ## 6. Data display
 
 ### 6.1 Data table (web admin)
-Container: `surface.primary`, radius `md`, 1px `border.subtle` (no glass). Header row: height 40,
+Container: `surface.primary`, radius `md`, 1px `color.border.subtle` (no glass). Header row: height 40,
 `surface.secondary`, `label.sm` `text.secondary`, sticky (`z.raised`), sortable headers show
 `arrow-up-down` → `arrow-up`/`arrow-down` 16 and `aria-sort`. Rows: 48 (comfortable) / 40 (dense),
-`body.sm`/`body.md`, 1px `border.subtle` dividers, hover `state.hover-overlay`, selected
+`body.sm`/`body.md`, 1px `color.border.subtle` dividers, hover `state.hover-overlay`, selected
 `state.selected-bg` + checkbox. Numeric columns right-aligned with `numeric.md` (tabular); IDs use
 `font.feature.disambiguate`. Status columns use badges. Row actions: trailing icon buttons (32)
 visible on hover/focus, always visible on touch. Pagination or virtual scroll ≥ 100 rows; footer

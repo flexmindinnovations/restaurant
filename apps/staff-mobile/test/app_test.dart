@@ -8,8 +8,8 @@ void main() {
   setUpAll(loadDosaFonts);
 
   Future<void> pumpApp(WidgetTester tester, {bool kitchen = false}) async {
-    tester.view.physicalSize = const Size(390 * 3, 1500 * 3);
-    tester.view.devicePixelRatio = 3;
+    tester.view.physicalSize = const Size(390 * 2, 1200 * 2);
+    tester.view.devicePixelRatio = 2;
     addTearDown(tester.view.reset);
     await tester.pumpWidget(DosaStaffApp(initialKitchenMode: kitchen));
     // Lottie loads asynchronously; give it real time, then settle a frame.

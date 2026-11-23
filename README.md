@@ -70,6 +70,7 @@ themes: `admin-light`, `admin-monitor`, `staff-light`, `staff-kitchen`, `custome
 | [PROJECT_SETUP.md](docs/PROJECT_SETUP.md) | Install, build, validate, run |
 | [ROADMAP.md](docs/ROADMAP.md) | Next steps and known limitations |
 | [TOKEN_REFERENCE.md](docs/reference/TOKEN_REFERENCE.md) | Every token in every theme (generated) |
+| [BOOTSTRAP_AUDIT.md](docs/reference/BOOTSTRAP_AUDIT.md) | Acceptance criteria, validation results and findings of the bootstrap audit |
 
 ## Licences
 
