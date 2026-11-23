@@ -1,0 +1,38 @@
+/* Base layer: document defaults that every DOSA web surface inherits. */
+@layer dosa.base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--dosa-color-background-canvas);
+    color: var(--dosa-color-text-primary);
+    font: var(--dosa-typography-body-md);
+    letter-spacing: var(--dosa-typography-body-md-letter-spacing);
+    font-optical-sizing: auto;
+  }
+
+  :focus-visible {
+    outline: var(--dosa-focus-ring-width) solid var(--dosa-color-focus-ring);
+    outline-offset: var(--dosa-focus-ring-offset);
+  }
+
+  ::selection { background: var(--dosa-color-brand-primary-subtle); color: var(--dosa-color-text-primary); }
+
+  @media (prefers-reduced-motion: reduce) {
+    /* Safety net. Essential progress indicators (.dosa-spinner) keep a slowed animation. */
+    *:not(.dosa-spinner), *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

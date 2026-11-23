@@ -1,0 +1,14 @@
+{
+  "name": "@dosa/motion-assets",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DOSA Lottie animations (light/dark), CSS motion utilities and static SVG fallbacks.",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "validate": "node scripts/generate.mjs --check && node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "lottie-web": "5.13.0"
+  }
+}

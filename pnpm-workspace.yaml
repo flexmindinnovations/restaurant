@@ -1,0 +1,7 @@
+packages:
+  - "apps/admin-web"
+  - "packages/design-tokens"
+  - "packages/brand-assets"
+  - "packages/motion-assets"
+  - "packages/web-ui"
+  - "packages/documentation"

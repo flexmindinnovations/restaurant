@@ -1,0 +1,37 @@
+/* Typography utilities mapped 1:1 to typography tokens. */
+@layer dosa.utilities {
+  .dosa-display-xl, .dosa-display-lg, .dosa-display-md,
+  .dosa-h1, .dosa-h2, .dosa-h3, .dosa-h4, .dosa-h5 { margin: 0; text-wrap: balance; }
+
+  .dosa-display-xl { font: var(--dosa-typography-display-xl); letter-spacing: var(--dosa-typography-display-xl-letter-spacing); }
+  .dosa-display-lg { font: var(--dosa-typography-display-lg); letter-spacing: var(--dosa-typography-display-lg-letter-spacing); }
+  .dosa-display-md { font: var(--dosa-typography-display-md); letter-spacing: var(--dosa-typography-display-md-letter-spacing); }
+  .dosa-h1 { font: var(--dosa-typography-heading-h1); letter-spacing: var(--dosa-typography-heading-h1-letter-spacing); }
+  .dosa-h2 { font: var(--dosa-typography-heading-h2); letter-spacing: var(--dosa-typography-heading-h2-letter-spacing); }
+  .dosa-h3 { font: var(--dosa-typography-heading-h3); letter-spacing: var(--dosa-typography-heading-h3-letter-spacing); }
+  .dosa-h4 { font: var(--dosa-typography-heading-h4); letter-spacing: var(--dosa-typography-heading-h4-letter-spacing); }
+  .dosa-h5 { font: var(--dosa-typography-heading-h5); letter-spacing: var(--dosa-typography-heading-h5-letter-spacing); }
+  .dosa-body-lg { font: var(--dosa-typography-body-lg); letter-spacing: var(--dosa-typography-body-lg-letter-spacing); }
+  .dosa-body-md { font: var(--dosa-typography-body-md); letter-spacing: var(--dosa-typography-body-md-letter-spacing); }
+  .dosa-body-sm { font: var(--dosa-typography-body-sm); letter-spacing: var(--dosa-typography-body-sm-letter-spacing); }
+  .dosa-label-lg { font: var(--dosa-typography-label-lg); letter-spacing: var(--dosa-typography-label-lg-letter-spacing); }
+  .dosa-label-md { font: var(--dosa-typography-label-md); letter-spacing: var(--dosa-typography-label-md-letter-spacing); }
+  .dosa-label-sm { font: var(--dosa-typography-label-sm); letter-spacing: var(--dosa-typography-label-sm-letter-spacing); }
+  .dosa-caption { font: var(--dosa-typography-meta-caption); letter-spacing: var(--dosa-typography-meta-caption-letter-spacing); }
+  .dosa-overline { font: var(--dosa-typography-meta-overline); letter-spacing: var(--dosa-typography-meta-overline-letter-spacing); text-transform: uppercase; }
+
+  .dosa-numeric-hero, .dosa-numeric-lg, .dosa-numeric-md, .dosa-numeric-sm, .dosa-numeric-timer, .dosa-tabular {
+    font-feature-settings: var(--dosa-font-feature-tabular);
+    font-variant-numeric: tabular-nums;
+  }
+  .dosa-numeric-hero { font: var(--dosa-typography-numeric-hero); letter-spacing: var(--dosa-typography-numeric-hero-letter-spacing); }
+  .dosa-numeric-lg { font: var(--dosa-typography-numeric-lg); letter-spacing: var(--dosa-typography-numeric-lg-letter-spacing); }
+  .dosa-numeric-md { font: var(--dosa-typography-numeric-md); letter-spacing: var(--dosa-typography-numeric-md-letter-spacing); }
+  .dosa-numeric-sm { font: var(--dosa-typography-numeric-sm); letter-spacing: var(--dosa-typography-numeric-sm-letter-spacing); }
+  .dosa-numeric-timer { font: var(--dosa-typography-numeric-timer); letter-spacing: var(--dosa-typography-numeric-timer-letter-spacing); }
+  .dosa-code-id { font-feature-settings: var(--dosa-font-feature-disambiguate); font-variant-numeric: tabular-nums slashed-zero; }
+
+  .dosa-text-secondary { color: var(--dosa-color-text-secondary); }
+  .dosa-text-tertiary { color: var(--dosa-color-text-tertiary); }
+  .dosa-text-brand { color: var(--dosa-color-text-brand); }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@dosa/brand-assets",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Original DOSA brand symbol, wordmark, app icons, illustrations, textures and fonts.",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-svg.mjs",
+    "validate": "node scripts/validate.mjs",
+    "icons:export": "node scripts/export-app-icons.mjs"
+  }
+}

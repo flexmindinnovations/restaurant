@@ -1,0 +1,332 @@
+{
+  "color": {
+    "$type": "color",
+    "$description": "DOSA primitive palette. Never reference primitives from application code; use semantic tokens.",
+    "brand": {
+      "$description": "The eight exact brand colours.",
+      "midnight-ink": {
+        "$value": "#202039",
+        "$description": "Primary text, dark surfaces, the wordmark."
+      },
+      "royal-violet": {
+        "$value": "#7564E8",
+        "$description": "Signature accent: focus, selection, intelligence, primary actions (via violet.650 fill)."
+      },
+      "saffron": {
+        "$value": "#E9A23B",
+        "$description": "Hospitality highlight, warmth, warnings."
+      },
+      "warm-coral": {
+        "$value": "#E97861",
+        "$description": "Appetite and urgency; critical alerts (dark themes)."
+      },
+      "mint": {
+        "$value": "#35B99A",
+        "$description": "Freshness, success, live indicators."
+      },
+      "pearl": {
+        "$value": "#F7F5F0",
+        "$description": "Warm canvas for light themes."
+      },
+      "cloud": {
+        "$value": "#ECEBF1",
+        "$description": "Cool secondary surface, dividers on pearl."
+      },
+      "slate": {
+        "$value": "#66677A",
+        "$description": "Secondary text, icons, metadata."
+      }
+    },
+    "white": {
+      "$value": "#FFFFFF"
+    },
+    "black": {
+      "$value": "#000000"
+    },
+    "violet": {
+      "$description": "Royal Violet ramp. 600 = brand Royal Violet #7564E8.",
+      "50": {
+        "$value": "#F3F4FF"
+      },
+      "100": {
+        "$value": "#E9E9FF"
+      },
+      "200": {
+        "$value": "#D6D6FF"
+      },
+      "300": {
+        "$value": "#BFBEFF"
+      },
+      "400": {
+        "$value": "#A6A2FF"
+      },
+      "500": {
+        "$value": "#8D84F8"
+      },
+      "600": {
+        "$value": "#7564E8"
+      },
+      "650": {
+        "$value": "#6857D5"
+      },
+      "700": {
+        "$value": "#5C4AC3"
+      },
+      "800": {
+        "$value": "#4530A0"
+      },
+      "900": {
+        "$value": "#30147D"
+      },
+      "950": {
+        "$value": "#1F0060"
+      }
+    },
+    "saffron": {
+      "$description": "Saffron ramp. 400 = brand Saffron #E9A23B.",
+      "50": {
+        "$value": "#FFF4DD"
+      },
+      "100": {
+        "$value": "#FFE9C8"
+      },
+      "200": {
+        "$value": "#FFD6A3"
+      },
+      "300": {
+        "$value": "#F7BD73"
+      },
+      "400": {
+        "$value": "#E9A23B"
+      },
+      "500": {
+        "$value": "#C9871E"
+      },
+      "600": {
+        "$value": "#A96B00"
+      },
+      "650": {
+        "$value": "#9A5E00"
+      },
+      "700": {
+        "$value": "#8B5200"
+      },
+      "800": {
+        "$value": "#6E3A00"
+      },
+      "900": {
+        "$value": "#522300"
+      },
+      "950": {
+        "$value": "#3A0E00"
+      }
+    },
+    "coral": {
+      "$description": "Warm Coral ramp. 500 = brand Warm Coral #E97861.",
+      "50": {
+        "$value": "#FFEFE9"
+      },
+      "100": {
+        "$value": "#FFE4DB"
+      },
+      "200": {
+        "$value": "#FFCFC2"
+      },
+      "300": {
+        "$value": "#FFB4A3"
+      },
+      "400": {
+        "$value": "#F89682"
+      },
+      "500": {
+        "$value": "#E97861"
+      },
+      "600": {
+        "$value": "#C45C47"
+      },
+      "650": {
+        "$value": "#B24F3B"
+      },
+      "700": {
+        "$value": "#A14230"
+      },
+      "800": {
+        "$value": "#802918"
+      },
+      "900": {
+        "$value": "#600E00"
+      },
+      "950": {
+        "$value": "#450000"
+      }
+    },
+    "mint": {
+      "$description": "Mint ramp. 400 = brand Mint #35B99A.",
+      "50": {
+        "$value": "#E4FEF5"
+      },
+      "100": {
+        "$value": "#CFF5E9"
+      },
+      "200": {
+        "$value": "#A9E6D3"
+      },
+      "300": {
+        "$value": "#77D2B8"
+      },
+      "400": {
+        "$value": "#35B99A"
+      },
+      "500": {
+        "$value": "#159F82"
+      },
+      "600": {
+        "$value": "#00846A"
+      },
+      "650": {
+        "$value": "#00785F"
+      },
+      "700": {
+        "$value": "#006C54"
+      },
+      "800": {
+        "$value": "#00543F"
+      },
+      "900": {
+        "$value": "#003D2B"
+      },
+      "950": {
+        "$value": "#002A1A"
+      }
+    },
+    "rose": {
+      "$description": "Rose ramp (supporting; end stop of the Intelligence gradient). 400 = #E9789B.",
+      "50": {
+        "$value": "#FFEEF5"
+      },
+      "100": {
+        "$value": "#FFDEE9"
+      },
+      "200": {
+        "$value": "#FFC2D3"
+      },
+      "300": {
+        "$value": "#FB9EB8"
+      },
+      "400": {
+        "$value": "#E9789B"
+      },
+      "500": {
+        "$value": "#CB6283"
+      },
+      "600": {
+        "$value": "#AC4A6B"
+      },
+      "700": {
+        "$value": "#903554"
+      },
+      "800": {
+        "$value": "#741F3F"
+      },
+      "900": {
+        "$value": "#59072B"
+      },
+      "950": {
+        "$value": "#42001A"
+      }
+    },
+    "sky": {
+      "$description": "Sky ramp (supporting; information states and charts only).",
+      "50": {
+        "$value": "#E9F9FF"
+      },
+      "100": {
+        "$value": "#D8EEFF"
+      },
+      "200": {
+        "$value": "#B9D9FE"
+      },
+      "300": {
+        "$value": "#93C0F3"
+      },
+      "400": {
+        "$value": "#68A2E3"
+      },
+      "500": {
+        "$value": "#3C83CE"
+      },
+      "600": {
+        "$value": "#276BB1"
+      },
+      "650": {
+        "$value": "#1D60A3"
+      },
+      "700": {
+        "$value": "#125696"
+      },
+      "800": {
+        "$value": "#00417C"
+      },
+      "900": {
+        "$value": "#002D63"
+      },
+      "950": {
+        "$value": "#001B4D"
+      }
+    },
+    "ink": {
+      "$description": "Ink neutral ramp. 900 = brand Midnight Ink #202039. 950/975 are deeper night surfaces for dark themes.",
+      "50": {
+        "$value": "#F6F6FD"
+      },
+      "100": {
+        "$value": "#EBEBF3"
+      },
+      "200": {
+        "$value": "#D7D8E2"
+      },
+      "300": {
+        "$value": "#BEBFCC"
+      },
+      "400": {
+        "$value": "#A2A3B4"
+      },
+      "500": {
+        "$value": "#86879B"
+      },
+      "600": {
+        "$value": "#696A80"
+      },
+      "700": {
+        "$value": "#4F5068"
+      },
+      "800": {
+        "$value": "#373750"
+      },
+      "850": {
+        "$value": "#2B2B45"
+      },
+      "900": {
+        "$value": "#202039"
+      },
+      "950": {
+        "$value": "#14132A"
+      },
+      "975": {
+        "$value": "#0D0D20"
+      }
+    },
+    "gradient-stop": {
+      "$description": "Exact stops used by brand gradients that are not ramp steps.",
+      "lavender": {
+        "$value": "#A18AEF"
+      },
+      "indigo": {
+        "$value": "#373C68"
+      },
+      "mint-soft": {
+        "$value": "#65C9A4"
+      }
+    }
+  }
+}

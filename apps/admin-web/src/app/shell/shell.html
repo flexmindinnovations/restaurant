@@ -1,0 +1,34 @@
+<div class="shell dosa-mesh dosa-mesh--quiet dosa-grain dosa-grain--fixed">
+  <header class="topbar dosa-glass dosa-glass--subtle">
+    <img class="topbar__logo" [src]="themes.theme() === 'admin-light' ? 'brand/dosa-lockup.svg' : 'brand/dosa-lockup-reversed.svg'" alt="DOSA" width="128" height="40" />
+    <span class="topbar__product dosa-label-md">Admin</span>
+    <span class="topbar__spacer"></span>
+    <button
+      matIconButton
+      type="button"
+      (click)="themes.toggle()"
+      [matTooltip]="themes.theme() === 'admin-light' ? 'Switch to monitoring (dark)' : 'Switch to light'"
+      [attr.aria-label]="themes.theme() === 'admin-light' ? 'Switch to monitoring theme' : 'Switch to light theme'"
+    >
+      <dosa-icon [svg]="themes.theme() === 'admin-light' ? icons.Moon : icons.Sun" />
+    </button>
+  </header>
+
+  <mat-sidenav-container class="body">
+    <mat-sidenav mode="side" opened class="sidebar dosa-glass dosa-glass--subtle">
+      <nav aria-label="Main">
+        <mat-nav-list>
+          <a mat-list-item routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">
+            <dosa-icon matListItemIcon [svg]="icons.LayoutGrid" />
+            <span matListItemTitle class="dosa-label-md">Foundations</span>
+          </a>
+        </mat-nav-list>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+      <main>
+        <ng-content />
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

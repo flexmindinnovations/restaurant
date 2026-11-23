@@ -1,0 +1,58 @@
+/* DOSA motion utilities: small, token-driven UI feedback that does not need Lottie.
+   All durations/easings are motion tokens. Everything collapses under prefers-reduced-motion. */
+@layer dosa.utilities {
+  /* ---------- Enter / exit ---------- */
+  @keyframes dosa-fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes dosa-rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes dosa-scale-in { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+  @keyframes dosa-sheet-in { from { transform: translateY(100%); } to { transform: none; } }
+  @keyframes dosa-drawer-in { from { transform: translateX(-100%); } to { transform: none; } }
+
+  .dosa-enter-fade { animation: dosa-fade-in var(--dosa-motion-duration-moderate) var(--dosa-motion-easing-decelerate) both; }
+  .dosa-enter-rise { animation: dosa-rise-in var(--dosa-motion-duration-base) var(--dosa-motion-easing-decelerate) both; }
+  .dosa-enter-scale { animation: dosa-scale-in var(--dosa-motion-duration-base) var(--dosa-motion-easing-emphasized) both; }
+  .dosa-enter-sheet { animation: dosa-sheet-in var(--dosa-motion-duration-slow) var(--dosa-motion-easing-emphasized) both; }
+  .dosa-enter-drawer { animation: dosa-drawer-in var(--dosa-motion-duration-base) var(--dosa-motion-easing-emphasized) both; }
+  /* Stagger children of a list on first render only (max 6 steps = 240ms total). */
+  .dosa-stagger > * { animation: dosa-rise-in var(--dosa-motion-duration-base) var(--dosa-motion-easing-decelerate) both; }
+  .dosa-stagger > :nth-child(2) { animation-delay: 40ms; } .dosa-stagger > :nth-child(3) { animation-delay: 80ms; }
+  .dosa-stagger > :nth-child(4) { animation-delay: 120ms; } .dosa-stagger > :nth-child(5) { animation-delay: 160ms; }
+  .dosa-stagger > :nth-child(n+6) { animation-delay: 200ms; }
+
+  /* ---------- Interaction feedback ---------- */
+  .dosa-press { transition: transform var(--dosa-motion-duration-fast) var(--dosa-motion-easing-standard); }
+  .dosa-press:active { transform: scale(0.98); }
+  .dosa-lift { transition: transform var(--dosa-motion-duration-quick) var(--dosa-motion-easing-standard), box-shadow var(--dosa-motion-duration-quick) var(--dosa-motion-easing-standard); }
+  .dosa-lift:hover { transform: translateY(-2px); box-shadow: var(--dosa-shadow-2); }
+
+  /* ---------- Status ---------- */
+  /* Live indicator: a calm 1.2s halo pulse (mint). Use on ≤ 1 element per view region. */
+  @keyframes dosa-live-pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--dosa-color-status-live) 55%, transparent); } 70%, 100% { box-shadow: 0 0 0 8px transparent; } }
+  .dosa-live-dot { display: inline-block; inline-size: 8px; block-size: 8px; border-radius: 50%; background: var(--dosa-color-status-live); animation: dosa-live-pulse var(--dosa-motion-duration-ambient) var(--dosa-motion-easing-decelerate) infinite; }
+  .dosa-live-dot--critical { background: var(--dosa-color-status-critical); }
+  /* Status change: one noticeable highlight sweep when an order changes state, then rest. */
+  @keyframes dosa-status-flash { 0% { background-color: var(--dosa-color-state-selected-bg); } 100% { background-color: transparent; } }
+  .dosa-status-changed { animation: dosa-status-flash var(--dosa-motion-duration-deliberate) var(--dosa-motion-easing-standard) 2 alternate; }
+  /* Number tick: apply when a metric value updates. */
+  @keyframes dosa-tick { 0% { transform: translateY(-30%); opacity: 0; } 100% { transform: none; opacity: 1; } }
+  .dosa-value-updated { display: inline-block; animation: dosa-tick var(--dosa-motion-duration-moderate) var(--dosa-motion-easing-emphasized); }
+
+  /* ---------- Loading ---------- */
+  @keyframes dosa-shimmer { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+  .dosa-skeleton {
+    border-radius: var(--dosa-radius-xs);
+    background: linear-gradient(90deg, var(--dosa-color-surface-sunken) 0%, var(--dosa-color-surface-secondary) 50%, var(--dosa-color-surface-sunken) 100%);
+    background-size: 200% 100%;
+    animation: dosa-shimmer var(--dosa-motion-duration-ambient) var(--dosa-motion-easing-linear) infinite;
+  }
+  @keyframes dosa-spin { to { transform: rotate(360deg); } }
+  .dosa-spinner { inline-size: 20px; block-size: 20px; border-radius: 50%; border: 2px solid var(--dosa-color-border-subtle); border-top-color: var(--dosa-color-brand-primary); animation: dosa-spin 800ms var(--dosa-motion-easing-linear) infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dosa-enter-fade, .dosa-enter-rise, .dosa-enter-scale, .dosa-enter-sheet, .dosa-enter-drawer, .dosa-stagger > *, .dosa-value-updated, .dosa-status-changed { animation: dosa-fade-in 1ms both; }
+    .dosa-live-dot { animation: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--dosa-color-status-live) 30%, transparent); }
+    .dosa-skeleton { animation: none; }
+    .dosa-spinner { animation-duration: 2400ms; } /* keep a slow, essential progress cue */
+    .dosa-press:active, .dosa-lift:hover { transform: none; }
+  }
+}

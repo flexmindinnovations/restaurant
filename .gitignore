@@ -4,7 +4,7 @@ node_modules/
 *.log
 .angular/
 dist/
-!packages/*/dist/
+!packages/design-tokens/dist/
 coverage/
 .env
 .env.*
@@ -33,3 +33,10 @@ Thumbs.db
 
 # Verification artefacts
 .artifacts/
+
+# Dart library packages do not commit lockfiles
+packages/flutter-ui/pubspec.lock
+
+# Motion verification strips
+packages/motion-assets/.artifacts/
+packages/documentation/.artifacts/

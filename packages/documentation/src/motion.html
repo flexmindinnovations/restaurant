@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-dosa-theme="admin-light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOSA Motion</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="web-ui/dosa.css">
+  <link rel="stylesheet" href="specimen.css">
+  <style>
+    .mgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--dosa-space-4); }
+    .mcard { padding: var(--dosa-space-4); }
+    .mstage { aspect-ratio: 4 / 3; border-radius: var(--dosa-radius-md); background: var(--dosa-color-background-canvas); overflow: hidden; }
+    .mstage img { width: 100%; height: 100%; }
+    .mmeta { display: flex; justify-content: space-between; align-items: center; margin-top: var(--dosa-space-2); }
+    .mmeta button { font: var(--dosa-typography-label-sm); border: 1px solid var(--dosa-color-border-default); background: var(--dosa-color-action-neutral-bg); color: var(--dosa-color-action-neutral-fg); border-radius: var(--dosa-radius-sm); min-height: 32px; padding: 0 var(--dosa-space-3); cursor: pointer; }
+    .ui-row { display: flex; gap: var(--dosa-space-6); align-items: center; flex-wrap: wrap; }
+    .sk { display: grid; gap: var(--dosa-space-2); width: 260px; }
+  </style>
+</head>
+<body class="dosa-mesh dosa-mesh--quiet dosa-grain">
+  <header class="spec-header dosa-glass dosa-glass--subtle">
+    <div class="spec-brand"><img id="logo" src="assets/brand/dosa-lockup.svg" alt="DOSA" height="28"><span class="dosa-overline dosa-text-secondary">Motion</span></div>
+    <nav class="spec-themes" aria-label="Theme"><button data-theme="admin-light" aria-pressed="true">Light</button><button data-theme="admin-monitor">Dark</button></nav>
+  </header>
+  <main class="spec-main">
+    <section>
+      <h1 class="dosa-h1">Lottie library</h1>
+      <p class="dosa-body-md dosa-text-secondary" id="rm-note">Rendered with lottie-web (SVG renderer). With reduced motion enabled, each tile shows its static SVG fallback instead.</p>
+      <div class="mgrid" id="grid"></div>
+    </section>
+    <section>
+      <h2 class="dosa-h2">CSS micro-interactions</h2>
+      <div class="dosa-surface ui-row" style="padding:var(--dosa-space-6)">
+        <span class="dosa-label-md"><span class="dosa-live-dot"></span>&nbsp; Live</span>
+        <span class="dosa-label-md"><span class="dosa-live-dot dosa-live-dot--critical"></span>&nbsp; Critical</span>
+        <span class="dosa-spinner" role="progressbar" aria-label="Loading"></span>
+        <div class="sk" aria-hidden="true"><div class="dosa-skeleton" style="height:14px;width:70%"></div><div class="dosa-skeleton" style="height:14px"></div><div class="dosa-skeleton" style="height:14px;width:40%"></div></div>
+        <div class="dosa-surface dosa-lift dosa-press" style="padding:var(--dosa-space-4)" tabindex="0"><span class="dosa-label-md">Hover / press me</span></div>
+        <span class="dosa-numeric-lg" id="tick">₹1,84,320</span>
+      </div>
+    </section>
+  </main>
+  <script src="motion/lottie_light.min.js"></script>
+  <script>
+    const NAMES = ['order-received','order-accepted','food-preparation','order-ready','payment-success','empty-orders','empty-reservations','loading-processing','sync-success','restaurant-onboarding'];
+    const LOOP = new Set(['food-preparation','empty-orders','empty-reservations','loading-processing']);
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const root = document.documentElement; let players = [];
+    function render() {
+      players.forEach((p) => p.destroy()); players = [];
+      const mode = root.dataset.dosaTheme === 'admin-monitor' ? 'dark' : 'light';
+      document.getElementById('logo').src = `assets/brand/dosa-lockup${mode === 'dark' ? '-reversed' : ''}.svg`;
+      const grid = document.getElementById('grid');
+      grid.innerHTML = NAMES.map((n) => `<div class="dosa-surface mcard"><div class="mstage" id="s-${n}"></div><div class="mmeta"><span class="dosa-label-sm dosa-text-secondary">${n}${LOOP.has(n) ? ' · loop' : ''}</span><button data-replay="${n}">Replay</button></div></div>`).join('');
+      for (const n of NAMES) {
+        const el = document.getElementById(`s-${n}`);
+        if (reduce || !window.lottie) { el.innerHTML = `<img src="motion/fallbacks/${mode}/${n}.svg" alt="">`; continue; }
+        const p = lottie.loadAnimation({ container: el, renderer: 'svg', loop: LOOP.has(n), autoplay: true, path: `motion/lottie/${mode}/${n}.json` });
+        p.name = n; players.push(p);
+      }
+    }
+    document.addEventListener('click', (e) => { const n = e.target.dataset?.replay; if (n) players.find((p) => p.name === n)?.goToAndPlay(0, true); });
+    function setTheme(t) { root.dataset.dosaTheme = t; document.querySelectorAll('[data-theme]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === t))); render(); }
+    document.querySelectorAll('[data-theme]').forEach((b) => b.addEventListener('click', () => setTheme(b.dataset.theme)));
+    setTheme(new URLSearchParams(location.search).get('theme') || 'admin-light');
+    setInterval(() => { const el = document.getElementById('tick'); el.classList.remove('dosa-value-updated'); void el.offsetWidth; el.classList.add('dosa-value-updated'); }, 3000);
+  </script>
+</body>
+</html>

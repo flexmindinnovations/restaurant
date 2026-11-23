@@ -1,0 +1,97 @@
+<header class="intro">
+  <p class="dosa-overline">Design system check</p>
+  <h1 class="dosa-h1">Foundations</h1>
+  <p class="dosa-body-md dosa-text-secondary">
+    Angular Material components themed only through DOSA tokens. Switch the theme in the top bar to
+    see every value follow. This page verifies the wiring and is not a product screen.
+  </p>
+</header>
+
+<section class="block" aria-labelledby="actions-title">
+  <h2 id="actions-title" class="dosa-h3">Actions</h2>
+  <div class="row">
+    <button matButton="filled" type="button">Accept order</button>
+    <button matButton="tonal" type="button">Assign table</button>
+    <button matButton="outlined" type="button">Cancel</button>
+    <button matButton type="button">View details</button>
+    <button matButton="filled" class="is-destructive" type="button">Void bill</button>
+    <button matButton="filled" type="button" disabled>Disabled</button>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="inputs-title">
+  <h2 id="inputs-title" class="dosa-h3">Inputs and selection</h2>
+  <div class="grid grid--inputs">
+    <mat-form-field appearance="outline">
+      <mat-label>Search menu</mat-label>
+      <dosa-icon matPrefix size="sm" [svg]="icons.Search" />
+      <input matInput type="search" />
+      <mat-hint>Dish name or code</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Table</mat-label>
+      <input matInput value="T-0" aria-invalid="true" />
+      <mat-hint class="field-error">Choose a table between T-1 and T-24</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-slide-toggle checked>Accept online orders</mat-slide-toggle>
+    <mat-checkbox checked>Print kitchen ticket</mat-checkbox>
+  </div>
+  <mat-chip-listbox aria-label="Service" class="row">
+    <mat-chip-option selected>Dine in</mat-chip-option>
+    <mat-chip-option>Takeaway</mat-chip-option>
+    <mat-chip-option>Delivery</mat-chip-option>
+  </mat-chip-listbox>
+</section>
+
+<section class="block" aria-labelledby="status-title">
+  <h2 id="status-title" class="dosa-h3">Order status</h2>
+  <ul class="row badges" role="list">
+    @for (state of orderStates; track state.id) {
+      <li class="badge" [attr.data-state]="state.id">
+        <dosa-icon size="xs" [svg]="state.icon" />
+        <span class="dosa-label-sm">{{ state.label }}</span>
+      </li>
+    }
+    <li class="badge badge--live">
+      <span class="dosa-live-dot" aria-hidden="true"></span>
+      <span class="dosa-label-sm">Live</span>
+    </li>
+  </ul>
+</section>
+
+<section class="block" aria-labelledby="metrics-title">
+  <h2 id="metrics-title" class="dosa-h3">Metrics</h2>
+  <p class="dosa-caption dosa-text-tertiary">Sample values for type and layout only.</p>
+  <div class="grid grid--metrics">
+    @for (m of metrics; track m.label) {
+      <article class="metric dosa-surface dosa-elevation-1">
+        <p class="dosa-overline dosa-text-secondary">{{ m.label }}</p>
+        <p class="dosa-numeric-lg metric__value">{{ m.value }}</p>
+        <p class="delta dosa-label-sm" [class.delta--down]="!m.up">
+          <dosa-icon size="xs" [svg]="m.up ? icons.TrendingUp : icons.TrendingDown" />
+          <span class="dosa-numeric-sm">{{ m.delta }}</span>
+          <span class="visually-hidden">{{ m.up ? 'better than' : 'worse than' }}</span>
+          <span class="dosa-caption dosa-text-secondary">vs last week</span>
+        </p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="block split">
+  <article class="insight dosa-glass dosa-glass--premium" aria-labelledby="insight-title">
+    <p class="dosa-overline insight__eyebrow"><dosa-icon size="sm" [svg]="icons.Sparkles" /> Intelligence</p>
+    <h2 id="insight-title" class="dosa-display-md dosa-gradient-text">Friday dinner rush</h2>
+    <p class="dosa-body-md">Premium glass over the ambient mesh, with the Intelligence gradient for display text only.</p>
+    <button matButton="filled" type="button">Review forecast</button>
+  </article>
+
+  <article class="empty dosa-surface" aria-labelledby="empty-title">
+    <img [src]="'illustrations/' + mode() + '/empty-orders.svg'" alt="" width="200" height="150" />
+    <h2 id="empty-title" class="dosa-h4">No orders yet</h2>
+    <p class="dosa-body-md dosa-text-secondary">New orders appear here as soon as guests place them.</p>
+    <button matButton="tonal" type="button">Open the menu</button>
+  </article>
+</section>

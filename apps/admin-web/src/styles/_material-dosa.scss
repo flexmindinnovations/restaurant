@@ -1,0 +1,157 @@
+// Angular Material (M3) → DOSA bridge.
+//
+// `mat.theme()` emits Material's `--mat-sys-*` system variables; we then point every one of them at
+// a DOSA semantic CSS custom property. Because the DOSA variables change with `data-dosa-theme`,
+// Material components re-theme at runtime with no per-component overrides and no raw values here.
+// Source of truth: packages/design-tokens (see DESIGN.md §12).
+@use '@angular/material' as mat;
+
+// Material type roles → DOSA type styles.
+$type-map: (
+  display-large: display-xl,
+  display-medium: display-lg,
+  display-small: display-md,
+  headline-large: heading-h1,
+  headline-medium: heading-h2,
+  headline-small: heading-h3,
+  title-large: heading-h4,
+  title-medium: heading-h5,
+  title-small: label-md,
+  body-large: body-lg,
+  body-medium: body-md,
+  body-small: body-sm,
+  label-large: label-md,
+  label-medium: label-sm,
+  label-small: meta-caption,
+);
+
+// Material colour roles → DOSA semantic colours.
+$color-map: (
+  primary: action-primary-bg,
+  on-primary: action-primary-fg,
+  primary-container: action-secondary-bg,
+  on-primary-container: action-secondary-fg,
+  primary-fixed: action-secondary-bg,
+  primary-fixed-dim: action-secondary-bg-hover,
+  on-primary-fixed: action-secondary-fg,
+  on-primary-fixed-variant: action-secondary-fg,
+  secondary: action-highlight-bg,
+  on-secondary: action-highlight-fg,
+  // Material's "secondary container" drives tonal buttons and selected chips. In DOSA those are
+  // the violet tonal secondary action, so they map to action.secondary, not to Saffron.
+  secondary-container: action-secondary-bg,
+  on-secondary-container: action-secondary-fg,
+  secondary-fixed: action-secondary-bg,
+  secondary-fixed-dim: action-secondary-bg-hover,
+  on-secondary-fixed: action-secondary-fg,
+  on-secondary-fixed-variant: action-secondary-fg,
+  tertiary: status-success-solid,
+  on-tertiary: status-success-on-solid,
+  tertiary-container: status-success-bg,
+  on-tertiary-container: status-success-fg,
+  tertiary-fixed: status-success-bg,
+  tertiary-fixed-dim: status-success-bg,
+  on-tertiary-fixed: status-success-fg,
+  on-tertiary-fixed-variant: status-success-fg,
+  error: status-error-fg,
+  on-error: text-inverse,
+  error-container: status-error-bg,
+  on-error-container: status-error-fg,
+  background: background-canvas,
+  on-background: text-primary,
+  surface: surface-primary,
+  on-surface: text-primary,
+  surface-variant: surface-secondary,
+  on-surface-variant: text-secondary,
+  surface-dim: background-subtle,
+  surface-bright: surface-elevated,
+  surface-container-lowest: surface-primary,
+  surface-container-low: surface-primary,
+  surface-container: surface-elevated,
+  surface-container-high: surface-elevated,
+  surface-container-highest: surface-sunken,
+  surface-tint: action-primary-bg,
+  inverse-surface: surface-inverse,
+  inverse-on-surface: text-inverse,
+  outline: border-strong,
+  outline-variant: border-subtle,
+  shadow: shadow-key,
+  scrim: surface-scrim,
+);
+
+@mixin system-variables {
+  // Emit Material's full variable set once (structure, motion, state layers), then remap.
+  @include mat.theme((
+    color: (theme-type: light, primary: mat.$violet-palette, tertiary: mat.$green-palette),
+    typography: (plain-family: Inter, brand-family: 'Plus Jakarta Sans'),
+    density: 0,
+  ));
+
+  @each $role, $dosa in $color-map {
+    --mat-sys-#{$role}: var(--dosa-color-#{$dosa});
+  }
+  // Inverse primary sits on `surface.inverse`, so it flips with the scheme (snackbar actions).
+  --mat-sys-inverse-primary: var(--dosa-color-text-link);
+
+  @each $role, $dosa in $type-map {
+    --mat-sys-#{$role}: var(--dosa-typography-#{$dosa});
+    --mat-sys-#{$role}-font: var(--dosa-typography-#{$dosa}-font-family);
+    --mat-sys-#{$role}-size: var(--dosa-typography-#{$dosa}-font-size);
+    --mat-sys-#{$role}-line-height: var(--dosa-typography-#{$dosa}-line-height);
+    --mat-sys-#{$role}-tracking: var(--dosa-typography-#{$dosa}-letter-spacing);
+    --mat-sys-#{$role}-weight: var(--dosa-typography-#{$dosa}-font-weight);
+  }
+
+  --mat-sys-corner-none: var(--dosa-radius-none);
+  --mat-sys-corner-extra-small: var(--dosa-radius-xs);
+  --mat-sys-corner-extra-small-top: var(--dosa-radius-xs) var(--dosa-radius-xs) 0 0;
+  --mat-sys-corner-small: var(--dosa-radius-sm);
+  --mat-sys-corner-medium: var(--dosa-radius-md);
+  --mat-sys-corner-large: var(--dosa-radius-lg);
+  --mat-sys-corner-large-top: var(--dosa-radius-lg) var(--dosa-radius-lg) 0 0;
+  --mat-sys-corner-large-start: var(--dosa-radius-lg) 0 0 var(--dosa-radius-lg);
+  --mat-sys-corner-large-end: 0 var(--dosa-radius-lg) var(--dosa-radius-lg) 0;
+  --mat-sys-corner-extra-large: var(--dosa-radius-xl);
+  --mat-sys-corner-extra-large-top: var(--dosa-radius-xl) var(--dosa-radius-xl) 0 0;
+  --mat-sys-corner-full: var(--dosa-radius-full);
+
+  --mat-sys-level0: var(--dosa-shadow-0);
+  --mat-sys-level1: var(--dosa-shadow-1);
+  --mat-sys-level2: var(--dosa-shadow-2);
+  --mat-sys-level3: var(--dosa-shadow-3);
+  --mat-sys-level4: var(--dosa-shadow-4);
+  --mat-sys-level5: var(--dosa-shadow-4);
+}
+
+// DOSA component rules that differ from Material defaults (COMPONENT_GUIDELINES.md).
+@mixin component-overrides {
+  // Buttons: radius 8 (Material default is a pill), 40px default height.
+  @include mat.button-overrides((
+    filled-container-shape: var(--dosa-radius-sm),
+    outlined-container-shape: var(--dosa-radius-sm),
+    protected-container-shape: var(--dosa-radius-sm),
+    text-container-shape: var(--dosa-radius-sm),
+    tonal-container-shape: var(--dosa-radius-sm),
+    outlined-outline-color: var(--dosa-color-border-default),
+  ));
+  // Inputs: 40px web control height; outlined fields use the default border at rest.
+  @include mat.form-field-overrides((
+    container-height: var(--dosa-size-control-md),
+    container-vertical-padding: var(--dosa-space-2),
+    outlined-outline-color: var(--dosa-color-border-default),
+    outlined-hover-outline-color: var(--dosa-color-border-strong),
+    outlined-focus-outline-color: var(--dosa-color-focus-ring),
+    outlined-container-shape: var(--dosa-radius-sm),
+  ));
+  @include mat.card-overrides((
+    elevated-container-shape: var(--dosa-radius-md),
+    outlined-container-shape: var(--dosa-radius-md),
+    outlined-outline-color: var(--dosa-color-border-subtle),
+  ));
+  @include mat.dialog-overrides((
+    container-shape: var(--dosa-radius-lg),
+  ));
+  @include mat.chips-overrides((
+    container-shape-radius: var(--dosa-radius-full),
+  ));
+}
