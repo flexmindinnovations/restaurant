@@ -1,0 +1,555 @@
+{
+  "generatedBy": "packages/brand-assets/scripts/generate-svg.mjs",
+  "roles": {
+    "light": {
+      "ink": "#202039",
+      "muted": "#66677A",
+      "paper": "#FFFFFF",
+      "cloud": "#ECEBF1",
+      "halo": "#F3F4FF",
+      "shadow": "#D7D8E2",
+      "violet": "#7564E8",
+      "violetSoft": "#D6D6FF",
+      "saffron": "#E9A23B",
+      "saffronSoft": "#FFE9C8",
+      "coral": "#E97861",
+      "coralSoft": "#FFE4DB",
+      "mint": "#35B99A",
+      "mintSoft": "#CFF5E9",
+      "sky": "#3C83CE",
+      "skySoft": "#D8EEFF",
+      "rose": "#E9789B"
+    },
+    "dark": {
+      "ink": "#EBEBF3",
+      "muted": "#A2A3B4",
+      "paper": "#2B2B45",
+      "cloud": "#373750",
+      "halo": "#202039",
+      "shadow": "#0D0D20",
+      "violet": "#A6A2FF",
+      "violetSoft": "#4530A0",
+      "saffron": "#E9A23B",
+      "saffronSoft": "#6E3A00",
+      "coral": "#F89682",
+      "coralSoft": "#802918",
+      "mint": "#35B99A",
+      "mintSoft": "#00543F",
+      "sky": "#68A2E3",
+      "skySoft": "#00417C",
+      "rose": "#E9789B"
+    }
+  },
+  "assets": [
+    {
+      "file": "brand/dosa-symbol.svg",
+      "bytes": 374,
+      "kind": "brand",
+      "usage": "Symbol, full colour, light backgrounds. Favicon source.",
+      "size": "64×64 grid, D occupies 33×44",
+      "colour": "Fixed brand colours"
+    },
+    {
+      "file": "brand/dosa-symbol-reversed.svg",
+      "bytes": 374,
+      "kind": "brand",
+      "usage": "Symbol on Midnight Ink / dark surfaces.",
+      "size": "64×64",
+      "colour": "Fixed (pearl stem, violet-400 spark)"
+    },
+    {
+      "file": "brand/dosa-symbol-mono.svg",
+      "bytes": 404,
+      "kind": "brand",
+      "usage": "Single-colour symbol: inherits CSS color / Flutter colorFilter.",
+      "size": "64×64",
+      "colour": "currentColor"
+    },
+    {
+      "file": "brand/dosa-wordmark.svg",
+      "bytes": 1941,
+      "kind": "brand",
+      "usage": "Wordmark on light backgrounds.",
+      "size": "126.5×32 (scalable)",
+      "colour": "Midnight Ink"
+    },
+    {
+      "file": "brand/dosa-wordmark-reversed.svg",
+      "bytes": 1941,
+      "kind": "brand",
+      "usage": "Wordmark on dark backgrounds.",
+      "size": "126.5×32",
+      "colour": "Pearl"
+    },
+    {
+      "file": "brand/dosa-wordmark-mono.svg",
+      "bytes": 1961,
+      "kind": "brand",
+      "usage": "Single-colour wordmark.",
+      "size": "126.5×32",
+      "colour": "currentColor"
+    },
+    {
+      "file": "brand/dosa-lockup.svg",
+      "bytes": 2280,
+      "kind": "brand",
+      "usage": "Primary horizontal lock-up, light backgrounds.",
+      "size": "153.5×48",
+      "colour": "Fixed brand colours"
+    },
+    {
+      "file": "brand/dosa-lockup-reversed.svg",
+      "bytes": 2280,
+      "kind": "brand",
+      "usage": "Horizontal lock-up on dark backgrounds.",
+      "size": "153.5×48",
+      "colour": "Fixed (reversed)"
+    },
+    {
+      "file": "icons/app/admin-web.svg",
+      "bytes": 1004,
+      "kind": "app-icon",
+      "usage": "Web admin PWA / favicon-large. Technology gradient.",
+      "size": "1024×1024 master",
+      "colour": "Fixed"
+    },
+    {
+      "file": "icons/app/staff-mobile.svg",
+      "bytes": 975,
+      "kind": "app-icon",
+      "usage": "Staff app launcher. Midnight Ink with a Mint bowl (operations, live).",
+      "size": "1024×1024 master",
+      "colour": "Fixed"
+    },
+    {
+      "file": "icons/app/customer-mobile.svg",
+      "bytes": 981,
+      "kind": "app-icon",
+      "usage": "Customer app launcher. Hospitality gradient.",
+      "size": "1024×1024 master",
+      "colour": "Fixed"
+    },
+    {
+      "file": "icons/favicon.svg",
+      "bytes": 496,
+      "kind": "app-icon",
+      "usage": "Browser favicon (SVG).",
+      "size": "32×32 (64 grid)",
+      "colour": "Fixed"
+    },
+    {
+      "file": "illustrations/light/restaurant.svg",
+      "bytes": 2995,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A DOSA restaurant storefront with a striped saffron awning, a lit window and an open door.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/kitchen-workflow.svg",
+      "bytes": 4331,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "Three order tickets on a kitchen rail moving left to right, ending at a completed check.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/food-preparation.svg",
+      "bytes": 2175,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A dosa being spread on a hot griddle with a ladle, steam rising.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/dining-table.svg",
+      "bytes": 2601,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A set dining table with a plated dosa, chutney bowls, a glass and two chairs.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/order-processing.svg",
+      "bytes": 2873,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "An order ticket next to a three-step progress track: received, preparing, ready.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/online-ordering.svg",
+      "bytes": 3093,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A phone showing menu cards with an add-to-cart badge.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/payment-checkout.svg",
+      "bytes": 2375,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A payment card tapped on a terminal that prints a receipt.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/delivery-pickup.svg",
+      "bytes": 1722,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A takeaway bag travelling along a dotted route from the restaurant to a map pin.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/analytics-intelligence.svg",
+      "bytes": 2179,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A frosted panel with a rising revenue line, bars and the DOSA spark marking an insight.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/inventory.svg",
+      "bytes": 3545,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "Pantry shelves with jars, a sack and crates, and a checklist clipboard.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/reservations.svg",
+      "bytes": 3644,
+      "kind": "illustration-feature",
+      "mode": "light",
+      "usage": "A calendar with an evening booking highlighted and a small clock.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/empty-orders.svg",
+      "bytes": 1290,
+      "kind": "illustration-empty",
+      "mode": "light",
+      "usage": "An empty plate with cutlery waiting for the first order.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/empty-reservations.svg",
+      "bytes": 1308,
+      "kind": "illustration-empty",
+      "mode": "light",
+      "usage": "A calm, empty calendar page.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/empty-search.svg",
+      "bytes": 1530,
+      "kind": "illustration-empty",
+      "mode": "light",
+      "usage": "A magnifier over a blank menu card.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/empty-notifications.svg",
+      "bytes": 1175,
+      "kind": "illustration-empty",
+      "mode": "light",
+      "usage": "A covered serving cloche with nothing waiting under it.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/empty-menu.svg",
+      "bytes": 1343,
+      "kind": "illustration-empty",
+      "mode": "light",
+      "usage": "An open, blank menu waiting for its first dish.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/offline.svg",
+      "bytes": 1212,
+      "kind": "illustration-empty",
+      "mode": "light",
+      "usage": "A cloud with a broken connection line. Orders are queued until the connection returns.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/success-confirmation.svg",
+      "bytes": 1161,
+      "kind": "illustration-success",
+      "mode": "light",
+      "usage": "A mint check mark surrounded by celebratory sparks.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/payment-success.svg",
+      "bytes": 1322,
+      "kind": "illustration-success",
+      "mode": "light",
+      "usage": "A payment card with a mint confirmation check.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/order-ready.svg",
+      "bytes": 2405,
+      "kind": "illustration-success",
+      "mode": "light",
+      "usage": "A serving cloche lifted off a plated dosa, with a ready check.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/error-generic.svg",
+      "bytes": 1410,
+      "kind": "illustration-error",
+      "mode": "light",
+      "usage": "A coral alert disc beside a tipped-over chutney bowl.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/warning.svg",
+      "bytes": 1221,
+      "kind": "illustration-error",
+      "mode": "light",
+      "usage": "A saffron warning triangle with a timer.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/light/not-found.svg",
+      "bytes": 1172,
+      "kind": "illustration-error",
+      "mode": "light",
+      "usage": "A map pin with a question mark beside a dotted path that ends nowhere.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed light palette"
+    },
+    {
+      "file": "illustrations/dark/restaurant.svg",
+      "bytes": 2995,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A DOSA restaurant storefront with a striped saffron awning, a lit window and an open door.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/kitchen-workflow.svg",
+      "bytes": 4331,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "Three order tickets on a kitchen rail moving left to right, ending at a completed check.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/food-preparation.svg",
+      "bytes": 2175,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A dosa being spread on a hot griddle with a ladle, steam rising.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/dining-table.svg",
+      "bytes": 2601,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A set dining table with a plated dosa, chutney bowls, a glass and two chairs.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/order-processing.svg",
+      "bytes": 2873,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "An order ticket next to a three-step progress track: received, preparing, ready.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/online-ordering.svg",
+      "bytes": 3093,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A phone showing menu cards with an add-to-cart badge.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/payment-checkout.svg",
+      "bytes": 2375,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A payment card tapped on a terminal that prints a receipt.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/delivery-pickup.svg",
+      "bytes": 1722,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A takeaway bag travelling along a dotted route from the restaurant to a map pin.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/analytics-intelligence.svg",
+      "bytes": 2179,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A frosted panel with a rising revenue line, bars and the DOSA spark marking an insight.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/inventory.svg",
+      "bytes": 3545,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "Pantry shelves with jars, a sack and crates, and a checklist clipboard.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/reservations.svg",
+      "bytes": 3644,
+      "kind": "illustration-feature",
+      "mode": "dark",
+      "usage": "A calendar with an evening booking highlighted and a small clock.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/empty-orders.svg",
+      "bytes": 1290,
+      "kind": "illustration-empty",
+      "mode": "dark",
+      "usage": "An empty plate with cutlery waiting for the first order.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/empty-reservations.svg",
+      "bytes": 1308,
+      "kind": "illustration-empty",
+      "mode": "dark",
+      "usage": "A calm, empty calendar page.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/empty-search.svg",
+      "bytes": 1530,
+      "kind": "illustration-empty",
+      "mode": "dark",
+      "usage": "A magnifier over a blank menu card.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/empty-notifications.svg",
+      "bytes": 1175,
+      "kind": "illustration-empty",
+      "mode": "dark",
+      "usage": "A covered serving cloche with nothing waiting under it.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/empty-menu.svg",
+      "bytes": 1343,
+      "kind": "illustration-empty",
+      "mode": "dark",
+      "usage": "An open, blank menu waiting for its first dish.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/offline.svg",
+      "bytes": 1212,
+      "kind": "illustration-empty",
+      "mode": "dark",
+      "usage": "A cloud with a broken connection line. Orders are queued until the connection returns.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/success-confirmation.svg",
+      "bytes": 1175,
+      "kind": "illustration-success",
+      "mode": "dark",
+      "usage": "A mint check mark surrounded by celebratory sparks.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/payment-success.svg",
+      "bytes": 1336,
+      "kind": "illustration-success",
+      "mode": "dark",
+      "usage": "A payment card with a mint confirmation check.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/order-ready.svg",
+      "bytes": 2419,
+      "kind": "illustration-success",
+      "mode": "dark",
+      "usage": "A serving cloche lifted off a plated dosa, with a ready check.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/error-generic.svg",
+      "bytes": 1424,
+      "kind": "illustration-error",
+      "mode": "dark",
+      "usage": "A coral alert disc beside a tipped-over chutney bowl.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/warning.svg",
+      "bytes": 1235,
+      "kind": "illustration-error",
+      "mode": "dark",
+      "usage": "A saffron warning triangle with a timer.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    },
+    {
+      "file": "illustrations/dark/not-found.svg",
+      "bytes": 1172,
+      "kind": "illustration-error",
+      "mode": "dark",
+      "usage": "A map pin with a question mark beside a dotted path that ends nowhere.",
+      "size": "240×180 (4:3), scalable",
+      "colour": "Fixed dark palette"
+    }
+  ]
+}

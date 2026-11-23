@@ -19,6 +19,9 @@ function renderSwatches() {
 function setTheme(name) {
   root.dataset.dosaTheme = name;
   document.querySelectorAll('[data-theme]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === name)));
+  const dark = name === 'admin-monitor' || name === 'staff-kitchen';
+  const logo = document.querySelector('.spec-brand img');
+  if (logo) logo.src = `assets/brand/dosa-lockup${dark ? '-reversed' : ''}.svg`;
   renderSwatches();
 }
 document.querySelectorAll('[data-theme]').forEach((b) => b.addEventListener('click', () => setTheme(b.dataset.theme)));

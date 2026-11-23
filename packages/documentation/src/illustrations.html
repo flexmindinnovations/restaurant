@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-dosa-theme="admin-light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOSA Brand Assets</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="web-ui/dosa.css">
+  <link rel="stylesheet" href="specimen.css">
+  <style>
+    .gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--dosa-space-4); }
+    .gal figure { margin: 0; }
+    .gal .frame { background: var(--dosa-color-surface-primary); border: 1px solid var(--dosa-color-border-subtle); border-radius: var(--dosa-radius-lg); padding: var(--dosa-space-3); display: grid; place-items: center; aspect-ratio: 4 / 3; }
+    .gal .frame img { width: 100%; height: 100%; object-fit: contain; }
+    .gal figcaption { margin-top: var(--dosa-space-2); }
+    .brandrow { display: flex; flex-wrap: wrap; gap: var(--dosa-space-4); align-items: center; }
+    .brandrow .tile { padding: var(--dosa-space-6); border-radius: var(--dosa-radius-lg); background: var(--dosa-color-brand-pearl); border: 1px solid var(--dosa-color-border-subtle); }
+    .brandrow .tile.dark { background: var(--dosa-color-brand-midnight-ink); }
+  </style>
+</head>
+<body class="dosa-mesh dosa-mesh--quiet dosa-grain">
+  <header class="spec-header dosa-glass dosa-glass--subtle">
+    <div class="spec-brand"><img id="logo" src="assets/brand/dosa-lockup.svg" alt="DOSA" height="28"><span class="dosa-overline dosa-text-secondary">Brand assets</span></div>
+    <nav class="spec-themes" aria-label="Theme">
+      <button data-theme="admin-light" aria-pressed="true">Light</button>
+      <button data-theme="admin-monitor">Dark</button>
+    </nav>
+  </header>
+  <main class="spec-main">
+    <section>
+      <h1 class="dosa-h1">Brand marks & app icons</h1>
+      <div class="brandrow" style="margin-top:var(--dosa-space-4)">
+        <div class="tile"><img src="assets/brand/dosa-lockup.svg" alt="DOSA lock-up" height="48"></div>
+        <div class="tile dark"><img src="assets/brand/dosa-lockup-reversed.svg" alt="DOSA lock-up reversed" height="48"></div>
+        <div class="tile"><img src="assets/brand/dosa-symbol.svg" alt="DOSA symbol" height="64"></div>
+        <div class="tile dark"><img src="assets/brand/dosa-symbol-reversed.svg" alt="DOSA symbol reversed" height="64"></div>
+        <img src="assets/icons/app/admin-web.svg" alt="Admin app icon" height="96">
+        <img src="assets/icons/app/staff-mobile.svg" alt="Staff app icon" height="96">
+        <img src="assets/icons/app/customer-mobile.svg" alt="Customer app icon" height="96">
+      </div>
+    </section>
+    <section>
+      <h2 class="dosa-h2">Illustration library</h2>
+      <p class="dosa-body-md dosa-text-secondary">Generated from shared primitives. Switch theme to see the dark-surface set.</p>
+      <div class="gal" id="gal"></div>
+    </section>
+  </main>
+  <script>
+    const SCENES = ['restaurant','kitchen-workflow','food-preparation','dining-table','order-processing','online-ordering','payment-checkout','delivery-pickup','analytics-intelligence','inventory','reservations','empty-orders','empty-reservations','empty-search','empty-notifications','empty-menu','offline','success-confirmation','payment-success','order-ready','error-generic','warning','not-found'];
+    const root = document.documentElement;
+    function render() {
+      const mode = root.dataset.dosaTheme === 'admin-monitor' ? 'dark' : 'light';
+      document.getElementById('logo').src = `assets/brand/dosa-lockup${mode === 'dark' ? '-reversed' : ''}.svg`;
+      document.getElementById('gal').innerHTML = SCENES.map((s) => `<figure><div class="frame"><img src="assets/illustrations/${mode}/${s}.svg" alt=""></div><figcaption class="dosa-label-sm dosa-text-secondary">${s}</figcaption></figure>`).join('');
+    }
+    function setTheme(t) { root.dataset.dosaTheme = t; document.querySelectorAll('[data-theme]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.theme === t))); render(); }
+    document.querySelectorAll('[data-theme]').forEach((b) => b.addEventListener('click', () => setTheme(b.dataset.theme)));
+    setTheme(new URLSearchParams(location.search).get('theme') || 'admin-light');
+  </script>
+</body>
+</html>
