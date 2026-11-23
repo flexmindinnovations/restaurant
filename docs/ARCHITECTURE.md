@@ -53,7 +53,9 @@ dosa/
 ├── backend/
 │   └── api/                  Placeholder + plan for NestJS (no business logic in this phase)
 ├── design/                   Design-source material: brand, foundations, components, references
-├── docs/                     The written system (DESIGN.md is the master source of truth)
+├── docs/                     The written system (guidelines, setup, roadmap, token reference)
+├── scripts/                  Workspace scripts (Flutter asset sync, Flutter raw-colour lint)
+├── DESIGN.md                 Master design source of truth
 ├── package.json              Root scripts (pnpm)
 └── pnpm-workspace.yaml
 ```

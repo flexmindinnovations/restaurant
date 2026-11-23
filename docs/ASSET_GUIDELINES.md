@@ -62,7 +62,7 @@ wordmark in a live font.
 Masters are 1024×1024 with a 228px corner radius and a soft top-left light. The symbol sits inside
 the central 66% so Android adaptive-icon masks (circle, squircle) never crop it. Platform PNG sets
 (iOS `AppIcon.appiconset`, Android mipmaps/adaptive foreground) are produced from these masters at
-app-build time — see [PROJECT_SETUP.md](PROJECT_SETUP.md#app-icons).
+app-build time — see [PROJECT_SETUP.md](PROJECT_SETUP.md#6-app-icons).
 
 ## 4. Interface icons
 
@@ -97,4 +97,5 @@ See [DESIGN.md §6.2](../DESIGN.md#62-paper-grain). Use `paper-grain-256.webp` o
 - **Flutter:** `flutter_svg` (`SvgPicture.asset`). The illustration SVGs use only presentation
   attributes (no `<style>`, no CSS variables, no filters), which `flutter_svg` renders fully.
   Choose `light/` or `dark/` from `DosaTheme.of(context).isDark`.
-- **Email / PDF:** use the PNG exports generated at build time, never inline SVG.
+- **Email / PDF:** use PNG renders, never inline SVG. Only launcher icons are rendered today
+  (`pnpm icons:export`); a general PNG export for email assets is on the [ROADMAP](ROADMAP.md).

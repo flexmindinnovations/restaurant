@@ -64,7 +64,7 @@ fails if those copies drift from the canonical files.
 
 ## 3. Quality gates
 
-Everything below runs locally and in `pnpm validate`. A change is not done until they pass.
+Everything below runs locally through `pnpm validate` and `pnpm flutter:check`. A change is not done until they pass.
 
 | Gate | Command | Fails on |
 |---|---|---|
@@ -73,9 +73,8 @@ Everything below runs locally and in `pnpm validate`. A change is not done until
 | SVG assets | `pnpm assets:validate` | Malformed XML, missing `viewBox`/accessible name, rasters, scripts, filters in illustrations, duplicate ids, off-palette colours, size budget, index gaps, light/dark mismatch |
 | Motion | `pnpm motion:validate` | Generator output stale, render errors in lottie-web, > 15 KB, > 12 layers, masks/mattes/images, fallback missing |
 | Web foundations | `pnpm web-ui:build` | Unknown `--dosa-*` references in the CSS layers |
-| Flutter foundations | `flutter analyze` + `flutter test` in `packages/flutter-ui` | Analyzer issues; theme, surface or asset parsing tests failing |
-| Flutter asset copies | `pnpm flutter:check-assets` | Copies differ from canonical files |
-| App source | raw-colour lint in each app | `#RRGGBB` literals in app code |
+| Flutter (package and apps) | `pnpm flutter:check` | Asset copies drifting, raw colours in app code, analyzer issues, failing widget or golden tests |
+| Admin web | `pnpm admin:lint`, `admin:build`, `admin:test` | ESLint (incl. template accessibility), raw colours in `src/`, build or unit test failures |
 
 Visual review: `pnpm docs:build` produces the specimen site (`packages/documentation/dist`), with
 foundations, illustrations and motion pages in every theme. Its screenshot script fails on missing
@@ -116,5 +115,9 @@ adding one is minor, changing a value within its role is a patch.
 | Glass, grain, gradients, mesh (web and Flutter) | Built; web verified visually; Flutter covered by widget tests |
 | Logo, app icon masters, favicon, 23 illustrations × 2 modes | Built and validated |
 | 10 Lottie animations × 2 modes + static fallbacks | Built; rendered in lottie-web and parsed by Flutter `lottie` |
-| Component specifications | Written ([COMPONENT_GUIDELINES.md](COMPONENT_GUIDELINES.md)); not yet built as a component library |
-| Platform PNG icon sets, Rive, Flutter goldens | Not yet (see [ROADMAP.md](ROADMAP.md)) |
+| Component specifications | Written ([COMPONENT_GUIDELINES.md](COMPONENT_GUIDELINES.md)) |
+| Components in code | Angular Material and Flutter Material themed through tokens; shared Flutter widgets `DosaOrderStatusBadge`, `DosaLogo`; Angular wrappers not yet built |
+| App scaffolds | Admin web, staff and customer apps build and pass their tests; foundations check screens only |
+| Launcher icons | Android legacy and iOS PNGs rendered from the masters; adaptive Android icons not yet |
+| Flutter goldens | 3 goldens (staff light, staff kitchen, customer warm); headless renderer does not apply blur |
+| Rive | Not used (see [ROADMAP.md](ROADMAP.md)) |

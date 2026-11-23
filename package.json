@@ -23,6 +23,7 @@
     "motion:generate": "pnpm --filter @dosa/motion-assets generate",
     "assets:generate": "pnpm --filter @dosa/brand-assets generate",
     "flutter:lint-colors": "node scripts/check-flutter-raw-values.mjs",
-    "flutter:check": "pnpm flutter:check-assets && pnpm flutter:lint-colors && cd packages/flutter-ui && flutter analyze && flutter test && cd ../../apps/staff-mobile && flutter analyze && flutter test && cd ../customer-mobile && flutter analyze && flutter test"
+    "flutter:check": "pnpm flutter:check-assets && pnpm flutter:lint-colors && cd packages/flutter-ui && flutter analyze && flutter test && cd ../../apps/staff-mobile && flutter analyze && flutter test && cd ../customer-mobile && flutter analyze && flutter test",
+    "icons:export": "pnpm --filter @dosa/brand-assets icons:export"
   }
 }

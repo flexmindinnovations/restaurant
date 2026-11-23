@@ -437,7 +437,7 @@ mapping): [docs/COMPONENT_GUIDELINES.md](docs/COMPONENT_GUIDELINES.md).
 | `packages/brand-assets` | Logo, app icons, 23×2 illustrations, grain, fonts, generators, validator |
 | `packages/motion-assets` | 10×2 Lottie files, SVG fallbacks, `dosa-motion.css`, generator, render verifier |
 | `packages/web-ui` | `dist/dosa.css`: tokens + fonts + base + type + surfaces + gradients + motion in `@layer`s |
-| `packages/flutter-ui` (`dosa_ui`) | `DosaThemeTokens`, `buildDosaTheme`, `DosaGlass`, `DosaGrain`, `DosaMeshBackground`, `DosaMotion`, `DosaAnimatedIllustration`, bundled assets |
+| `packages/flutter-ui` (`dosa_ui`) | `DosaThemeTokens`, `buildDosaTheme`, `DosaGlass`, `DosaGrain`, `DosaMeshBackground`, `DosaMotion`, `DosaAnimatedIllustration`, `DosaOrderStatusBadge`, `DosaLogo`, bundled assets |
 | `packages/documentation` | Static specimen site (foundations, illustrations, motion) |
 
 **Web (Angular)**
@@ -458,9 +458,9 @@ mapping): [docs/COMPONENT_GUIDELINES.md](docs/COMPONENT_GUIDELINES.md).
 .order-row { padding: var(--dosa-space-3) var(--dosa-space-4); border-radius: var(--dosa-radius-sm); }
 ```
 
-Angular Material's `--mat-sys-*` system variables are mapped onto `--dosa-*` variables in the
-admin app's theme file, so Material components inherit DOSA colour, type and shape without
-per-component overrides.
+Angular Material's `--mat-sys-*` system variables are mapped onto `--dosa-*` variables in
+`apps/admin-web/src/styles/_material-dosa.scss`, so Material components inherit DOSA colour,
+type, shape and elevation and re-theme at runtime with `data-dosa-theme`.
 
 **Flutter**
 
