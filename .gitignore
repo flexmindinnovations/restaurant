@@ -36,3 +36,7 @@ Thumbs.db
 
 # Dart library packages do not commit lockfiles
 packages/flutter-ui/pubspec.lock
+
+# Motion verification strips
+packages/motion-assets/.artifacts/
+packages/documentation/.artifacts/

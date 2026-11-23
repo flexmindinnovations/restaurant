@@ -1,0 +1,49 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/brand-assets: {}
+
+  packages/design-tokens: {}
+
+  packages/documentation:
+    dependencies:
+      '@dosa/brand-assets':
+        specifier: workspace:*
+        version: link:../brand-assets
+      '@dosa/motion-assets':
+        specifier: workspace:*
+        version: link:../motion-assets
+      '@dosa/web-ui':
+        specifier: workspace:*
+        version: link:../web-ui
+
+  packages/motion-assets:
+    dependencies:
+      lottie-web:
+        specifier: 5.13.0
+        version: 5.13.0
+
+  packages/web-ui:
+    dependencies:
+      '@dosa/brand-assets':
+        specifier: workspace:*
+        version: link:../brand-assets
+      '@dosa/design-tokens':
+        specifier: workspace:*
+        version: link:../design-tokens
+
+packages:
+
+  lottie-web@5.13.0:
+    resolution: {integrity: sha512-+gfBXl6sxXMPe8tKQm7qzLnUy5DUPJPKIyRHwtpCpyUEYjHYRJC/5gjUvdkuO2c3JllrPtHXH5UJJK8LRYl5yQ==}
+
+snapshots:
+
+  lottie-web@5.13.0: {}

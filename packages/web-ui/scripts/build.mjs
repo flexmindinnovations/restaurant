@@ -9,7 +9,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PKGS = join(ROOT, '..');
 const DIST = join(ROOT, 'dist');
 const tokensCss = readFileSync(join(PKGS, 'design-tokens', 'dist', 'css', 'tokens.css'), 'utf8');
-const LAYERS = ['fonts.css', 'base.css', 'type.css', 'surfaces.css', 'gradients.css'];
+const LAYERS = ['fonts.css', 'base.css', 'type.css', 'surfaces.css', 'gradients.css', '../../motion-assets/css/dosa-motion.css'];
 
 const defined = new Set([...tokensCss.matchAll(/(--dosa-[a-z0-9-]+)\s*:/g)].map((m) => m[1]));
 let missing = 0;

@@ -24,7 +24,7 @@ pyftsubset plus-jakarta-sans/PlusJakartaSansVariable.ttf --unicodes="$U" --layou
 ```
 
 Flutter bundles the full `.ttf` files (copied into `packages/flutter-ui/fonts/` by
-`pnpm --filter @dosa/brand-assets fonts:sync`; `validate` fails if the copies drift).
+`pnpm flutter:sync-assets`; `pnpm flutter:check-assets` fails if the copies drift).
 Italics are intentionally not shipped: the DOSA UI does not use italic text.
 
 ## Verified OpenType features

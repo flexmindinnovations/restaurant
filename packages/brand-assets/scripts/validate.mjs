@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 // Validates the DOSA brand asset library.
 //   node scripts/validate.mjs               check everything
-//   node scripts/validate.mjs --sync-fonts  copy canonical font files into packages/flutter-ui/fonts first
-import { readFileSync, readdirSync, statSync, copyFileSync, existsSync } from 'node:fs';
-import { createHash } from 'node:crypto';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -11,22 +9,6 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PKGS = join(ROOT, '..');
 let errors = 0;
 const fail = (m) => { errors++; console.error(`✗ ${m}`); };
-
-// ---------- fonts: canonical copies vs Flutter copies ----------
-const FONT_PAIRS = [
-  ['fonts/inter/InterVariable.ttf', 'flutter-ui/fonts/InterVariable.ttf'],
-  ['fonts/inter/OFL.txt', 'flutter-ui/fonts/Inter-OFL.txt'],
-  ['fonts/plus-jakarta-sans/PlusJakartaSansVariable.ttf', 'flutter-ui/fonts/PlusJakartaSansVariable.ttf'],
-  ['fonts/plus-jakarta-sans/OFL.txt', 'flutter-ui/fonts/PlusJakartaSans-OFL.txt'],
-  ['textures/paper-grain-ink-256.webp', 'flutter-ui/assets/textures/paper-grain-ink-256.webp'],
-  ['textures/paper-grain-pearl-256.webp', 'flutter-ui/assets/textures/paper-grain-pearl-256.webp'],
-];
-const sha = (p) => createHash('sha256').update(readFileSync(p)).digest('hex');
-for (const [src, dst] of FONT_PAIRS) {
-  const a = join(ROOT, src); const b = join(PKGS, dst);
-  if (process.argv.includes('--sync-fonts')) copyFileSync(a, b);
-  if (!existsSync(b) || sha(a) !== sha(b)) fail(`${dst} differs from brand-assets/${src} (run: pnpm --filter @dosa/brand-assets fonts:sync)`);
-}
 
 // ---------- SVG checks ----------
 const palette = new Set(
@@ -85,5 +67,5 @@ const light = readdirSync(join(ROOT, 'illustrations', 'light')).sort().join();
 const dark = readdirSync(join(ROOT, 'illustrations', 'dark')).sort().join();
 if (light !== dark) fail('illustrations/light and illustrations/dark contain different files');
 
-console.log(`${svgs.length} SVGs, ${FONT_PAIRS.length} synced files checked; ${errors} problem(s).`);
+console.log(`${svgs.length} SVGs checked; ${errors} problem(s).`);
 process.exit(errors ? 1 : 0);

@@ -1,0 +1,74 @@
+{
+  "animations": [
+    {
+      "name": "order-received",
+      "title": "Order received",
+      "usage": "New order arrives (admin toast, staff queue, customer confirmation).",
+      "loop": false,
+      "poster": "end"
+    },
+    {
+      "name": "order-accepted",
+      "title": "Order accepted",
+      "usage": "Staff accepts an order; customer sees confirmation.",
+      "loop": false,
+      "poster": "end"
+    },
+    {
+      "name": "food-preparation",
+      "title": "Food preparation",
+      "usage": "Order is being prepared (loops while status = preparing).",
+      "loop": true,
+      "poster": "mid"
+    },
+    {
+      "name": "order-ready",
+      "title": "Order ready",
+      "usage": "Order is ready to serve / collect.",
+      "loop": false,
+      "poster": "end"
+    },
+    {
+      "name": "payment-success",
+      "title": "Payment success",
+      "usage": "Payment confirmed at checkout (customer) or POS (staff).",
+      "loop": false,
+      "poster": "end"
+    },
+    {
+      "name": "empty-orders",
+      "title": "Empty order list",
+      "usage": "No orders yet. Calm idle loop; never draws attention.",
+      "loop": true,
+      "poster": "start"
+    },
+    {
+      "name": "empty-reservations",
+      "title": "Empty reservation list",
+      "usage": "No bookings for the selected date. Calm idle loop.",
+      "loop": true,
+      "poster": "start"
+    },
+    {
+      "name": "loading-processing",
+      "title": "Loading / processing",
+      "usage": "Indeterminate work longer than ~1 s (sync, report generation). Use skeletons for content loading.",
+      "loop": true,
+      "poster": "start"
+    },
+    {
+      "name": "sync-success",
+      "title": "Successful synchronization",
+      "usage": "Offline queue flushed / data synced.",
+      "loop": false,
+      "poster": "end"
+    },
+    {
+      "name": "restaurant-onboarding",
+      "title": "Restaurant onboarding",
+      "usage": "Welcome / first-run setup hero. Plays once.",
+      "loop": false,
+      "poster": "end"
+    }
+  ]
+}

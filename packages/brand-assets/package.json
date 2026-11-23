@@ -5,7 +5,7 @@
   "description": "Original DOSA brand symbol, wordmark, app icons, illustrations, textures and fonts.",
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate.mjs",
-    "fonts:sync": "node scripts/validate.mjs --sync-fonts"
+    "generate": "node scripts/generate-svg.mjs",
+    "validate": "node scripts/validate.mjs"
   }
 }

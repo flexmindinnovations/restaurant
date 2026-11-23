@@ -27,7 +27,8 @@
   ::selection { background: var(--dosa-color-brand-primary-subtle); color: var(--dosa-color-text-primary); }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    /* Safety net. Essential progress indicators (.dosa-spinner) keep a slowed animation. */
+    *:not(.dosa-spinner), *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;

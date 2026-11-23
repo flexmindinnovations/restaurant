@@ -17,6 +17,10 @@
     "admin:build": "pnpm --filter @dosa/admin-web build",
     "admin:test": "pnpm --filter @dosa/admin-web test",
     "admin:lint": "pnpm --filter @dosa/admin-web lint",
-    "validate": "pnpm tokens:check && pnpm assets:validate && pnpm motion:validate && pnpm web-ui:build && pnpm admin:lint && pnpm admin:build && pnpm admin:test"
+    "validate": "pnpm tokens:check && pnpm assets:validate && pnpm motion:validate && pnpm web-ui:build && pnpm admin:lint && pnpm admin:build && pnpm admin:test",
+    "flutter:sync-assets": "node scripts/sync-flutter-assets.mjs",
+    "flutter:check-assets": "node scripts/sync-flutter-assets.mjs --check",
+    "motion:generate": "pnpm --filter @dosa/motion-assets generate",
+    "assets:generate": "pnpm --filter @dosa/brand-assets generate"
   }
 }

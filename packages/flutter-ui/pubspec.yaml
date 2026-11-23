@@ -11,6 +11,8 @@ dependencies:
   cupertino_ui: ^1.1.7
   flutter:
     sdk: flutter
+  flutter_svg: ^2.5.0
+  lottie: ^3.8.2
   material_ui: ^1.11.1
 
 dev_dependencies:
@@ -21,6 +23,13 @@ dev_dependencies:
 flutter:
   assets:
     - assets/textures/
+    - assets/brand/
+    - assets/illustrations/light/
+    - assets/illustrations/dark/
+    - assets/motion/light/
+    - assets/motion/dark/
+    - assets/motion/fallbacks/light/
+    - assets/motion/fallbacks/dark/
   fonts:
     - family: Inter
       fonts:
