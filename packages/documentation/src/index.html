@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-dosa-theme="admin-light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOSA Foundations Specimen</title>
+  <link rel="icon" href="assets/brand/dosa-symbol.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="web-ui/dosa.css">
+  <link rel="stylesheet" href="specimen.css">
+</head>
+<body class="dosa-mesh dosa-grain">
+  <header class="spec-header dosa-glass dosa-glass--subtle">
+    <div class="spec-brand">
+      <img src="assets/brand/dosa-lockup.svg" alt="DOSA" height="28" onerror="this.replaceWith(Object.assign(document.createElement('strong'),{textContent:'DOSA',className:'dosa-h4'}))">
+      <span class="dosa-overline dosa-text-secondary">Foundations specimen</span>
+    </div>
+    <nav class="spec-themes" aria-label="Theme">
+      <button data-theme="admin-light" aria-pressed="true">Admin light</button>
+      <button data-theme="admin-monitor">Monitor</button>
+      <button data-theme="staff-light">Staff</button>
+      <button data-theme="staff-kitchen">Kitchen</button>
+      <button data-theme="customer-warm">Customer</button>
+    </nav>
+  </header>
+
+  <main class="spec-main">
+    <section class="spec-hero dosa-glass dosa-glass--premium" aria-labelledby="hero-title">
+      <p class="dosa-overline dosa-text-brand">Warm intelligence</p>
+      <h1 id="hero-title" class="dosa-display-lg">One brand. Three apps. <span class="dosa-gradient-text">Five environments.</span></h1>
+      <p class="dosa-body-lg dosa-text-secondary spec-lede">This page renders only shared foundations: tokens, typography, frosted glass,
+        paper grain, ambient mesh, gradients and elevation. It is a verification sample, not an application screen.</p>
+    </section>
+
+    <section aria-labelledby="glass-title">
+      <h2 id="glass-title" class="dosa-h2">Frosted glass</h2>
+      <p class="dosa-body-md dosa-text-secondary">Real <code>backdrop-filter</code> over busy content. Toggle the fallback to see the non-blurred surfaces used when blur is unsupported or reduced transparency is requested.</p>
+      <label class="spec-toggle dosa-label-md"><input type="checkbox" id="glass-off"> Show non-blurred fallback</label>
+      <div class="spec-glass-stage" id="glass-stage">
+        <div class="spec-backdrop" aria-hidden="true">
+          <span class="b1"></span><span class="b2"></span><span class="b3"></span>
+          <p>ORDER 2041 · TABLE 12 · ₹1,480 · READY</p>
+        </div>
+        <div class="spec-glass-grid">
+          <div class="dosa-glass dosa-glass--subtle spec-glass-card"><p class="dosa-overline">A · Subtle</p><p class="dosa-h4">Navigation & controls</p><p class="dosa-body-sm dosa-text-secondary">blur 12 · tint 56% · shadow 1</p></div>
+          <div class="dosa-glass dosa-glass--standard spec-glass-card"><p class="dosa-overline">B · Standard</p><p class="dosa-h4">Floating panels</p><p class="dosa-body-sm dosa-text-secondary">blur 20 · tint 66% · shadow 2</p></div>
+          <div class="dosa-glass dosa-glass--premium spec-glass-card"><p class="dosa-overline">C · Premium</p><p class="dosa-h4">Hero & intelligence</p><p class="dosa-body-sm dosa-text-secondary">blur 32 · sheen · shadow 3</p></div>
+          <div class="dosa-glass dosa-glass--dark spec-glass-card"><p class="dosa-overline">D · Dark</p><p class="dosa-h4">Monitoring overlays</p><p class="dosa-body-sm" style="opacity:.78">blur 24 · ink 62% · shadow 3</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="grain-title">
+      <h2 id="grain-title" class="dosa-h2">Paper grain</h2>
+      <p class="dosa-body-md dosa-text-secondary">256px seamless tile on its own layer behind content. Left: grain off. Right: grain on at token opacity (3.5% light, 4% dark). Zoomed strips show the texture at 4×.</p>
+      <div class="spec-grain-pair">
+        <div class="spec-grain-panel dosa-surface--secondary"><span class="dosa-label-sm">Without grain</span><span class="spec-zoom"></span></div>
+        <div class="spec-grain-panel dosa-surface--secondary dosa-grain"><span class="dosa-label-sm">With grain</span><span class="spec-zoom spec-zoom--grain"></span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="gradient-title">
+      <h2 id="gradient-title" class="dosa-h2">Ambient gradients</h2>
+      <div class="spec-gradients">
+        <figure><div class="dosa-gradient-intelligence"></div><figcaption class="dosa-caption">Intelligence · #7564E8 → #A18AEF → #E9789B</figcaption></figure>
+        <figure><div class="dosa-gradient-hospitality"></div><figcaption class="dosa-caption">Hospitality · #E9A23B → #E97861</figcaption></figure>
+        <figure><div class="dosa-gradient-technology"></div><figcaption class="dosa-caption">Technology · #202039 → #373C68 → #7564E8</figcaption></figure>
+        <figure><div class="dosa-gradient-success"></div><figcaption class="dosa-caption">Success · #35B99A → #65C9A4</figcaption></figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="type-title">
+      <h2 id="type-title" class="dosa-h2">Typography</h2>
+      <div class="dosa-surface spec-type">
+        <p class="dosa-display-md">Display · Plus Jakarta Sans</p>
+        <p class="dosa-h1">Heading 1 · Tonight's service</p>
+        <p class="dosa-h2">Heading 2 · Kitchen throughput</p>
+        <p class="dosa-h3">Heading 3 · Table 12</p>
+        <p class="dosa-h4">Heading 4 · Course two</p>
+        <p class="dosa-h5">Heading 5 · Inter for density</p>
+        <p class="dosa-body-lg">Body large · Your masala dosa is on the griddle and will be ready in about six minutes.</p>
+        <p class="dosa-body-md">Body medium · Default admin body copy for descriptions, settings and forms.</p>
+        <p class="dosa-body-sm dosa-text-secondary">Body small · Helper text and dense table cells.</p>
+        <p class="dosa-caption dosa-text-secondary">Caption · Updated 2 min ago</p>
+        <div class="spec-numerals">
+          <div><span class="dosa-overline dosa-text-secondary">Revenue today</span><span class="dosa-numeric-hero">₹1,84,320</span></div>
+          <div><span class="dosa-overline dosa-text-secondary">Timer</span><span class="dosa-numeric-timer">07:41</span></div>
+          <div><span class="dosa-overline dosa-text-secondary">Order</span><span class="dosa-numeric-lg dosa-code-id">#A1O-2041</span></div>
+        </div>
+        <table class="spec-tnum dosa-body-sm">
+          <caption class="dosa-caption dosa-text-secondary">Tabular figures keep columns aligned</caption>
+          <tr><td>Masala dosa</td><td class="dosa-numeric-md">2</td><td class="dosa-numeric-md">₹ 360.00</td></tr>
+          <tr><td>Filter coffee</td><td class="dosa-numeric-md">11</td><td class="dosa-numeric-md">₹ 1,111.00</td></tr>
+          <tr><td>Rava idli</td><td class="dosa-numeric-md">4</td><td class="dosa-numeric-md">₹ 480.00</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="color-title">
+      <h2 id="color-title" class="dosa-h2">Semantic colour (live from the active theme)</h2>
+      <div class="spec-swatches" id="swatches"></div>
+    </section>
+
+    <section aria-labelledby="depth-title">
+      <h2 id="depth-title" class="dosa-h2">Elevation & radius</h2>
+      <div class="spec-depth">
+        <div class="dosa-surface dosa-elevation-0" style="border-radius:var(--dosa-radius-sm)"><span class="dosa-label-sm">0 · radius sm 8</span></div>
+        <div class="dosa-surface dosa-elevation-1" style="border-radius:var(--dosa-radius-md)"><span class="dosa-label-sm">1 · radius md 12</span></div>
+        <div class="dosa-surface dosa-elevation-2" style="border-radius:var(--dosa-radius-md)"><span class="dosa-label-sm">2 · hover</span></div>
+        <div class="dosa-surface dosa-elevation-3" style="border-radius:var(--dosa-radius-lg)"><span class="dosa-label-sm">3 · radius lg 18</span></div>
+        <div class="dosa-surface dosa-elevation-4" style="border-radius:var(--dosa-radius-xl)"><span class="dosa-label-sm">4 · radius xl 24</span></div>
+        <div class="dosa-surface dosa-elevation-brand" style="border-radius:var(--dosa-radius-full)"><span class="dosa-label-sm">brand · full</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="specimen.js"></script>
+</body>
+</html>

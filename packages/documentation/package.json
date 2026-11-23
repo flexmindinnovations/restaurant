@@ -1,0 +1,16 @@
+{
+  "name": "@dosa/documentation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static DOSA design-system specimen: proves tokens, type, glass, grain, gradients, illustrations and motion render.",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter @dosa/web-ui build && node scripts/build.mjs",
+    "screenshot": "node scripts/screenshot.mjs"
+  },
+  "dependencies": {
+    "@dosa/web-ui": "workspace:*",
+    "@dosa/brand-assets": "workspace:*",
+    "@dosa/motion-assets": "workspace:*"
+  }
+}

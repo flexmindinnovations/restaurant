@@ -135,7 +135,7 @@ export const primitives = {
   "opacity.hover-overlay": 0.06,
   "opacity.press-overlay": 0.12,
   "opacity.grain-light": 0.035,
-  "opacity.grain-dark": 0.05,
+  "opacity.grain-dark": 0.04,
   "size.control.sm": "32px",
   "size.control.md": "40px",
   "size.control.lg": "48px",
@@ -1147,7 +1147,7 @@ export const themes = {
         }
       ]
     },
-    "grain.opacity": 0.05,
+    "grain.opacity": 0.04,
     "grain.blend": "soft-light"
   },
   "staff-light": {
@@ -1715,7 +1715,7 @@ export const themes = {
         }
       ]
     },
-    "grain.opacity": 0.05,
+    "grain.opacity": 0.04,
     "grain.blend": "soft-light"
   },
   "customer-warm": {

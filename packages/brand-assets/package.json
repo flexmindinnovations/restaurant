@@ -1,0 +1,11 @@
+{
+  "name": "@dosa/brand-assets",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Original DOSA brand symbol, wordmark, app icons, illustrations, textures and fonts.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "fonts:sync": "node scripts/validate.mjs --sync-fonts"
+  }
+}

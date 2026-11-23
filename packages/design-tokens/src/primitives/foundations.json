@@ -50,7 +50,7 @@
     "hover-overlay": { "$value": 0.06, "$description": "State layer on hover." },
     "press-overlay": { "$value": 0.12, "$description": "State layer on press." },
     "grain-light": { "$value": 0.035, "$description": "Paper-grain layer opacity on light surfaces (3.5%)." },
-    "grain-dark": { "$value": 0.05, "$description": "Paper-grain layer opacity on dark surfaces (5%)." }
+    "grain-dark": { "$value": 0.04, "$description": "Paper-grain layer opacity on dark surfaces (4%)." }
   },
   "size": {
     "$type": "dimension",

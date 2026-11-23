@@ -279,6 +279,6 @@
       }
     ]
   },
-  "grain.opacity": 0.05,
+  "grain.opacity": 0.04,
   "grain.blend": "soft-light"
 }

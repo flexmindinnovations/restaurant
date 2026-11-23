@@ -188,7 +188,7 @@ Every value below is generated from `packages/design-tokens/src`. CSS custom pro
 | `opacity.hover-overlay` | `0.06` | State layer on hover. |
 | `opacity.press-overlay` | `0.12` | State layer on press. |
 | `opacity.grain-light` | `0.035` | Paper-grain layer opacity on light surfaces (3.5%). |
-| `opacity.grain-dark` | `0.05` | Paper-grain layer opacity on dark surfaces (5%). |
+| `opacity.grain-dark` | `0.04` | Paper-grain layer opacity on dark surfaces (4%). |
 
 ## Sizes
 
@@ -446,5 +446,5 @@ Colours shown resolved. Alpha values use `rgb(r g b / a)`.
 | `gradient.hospitality` | `#E9A23B` → `#E97861` | `#E9A23B` → `#E97861` | `#E9A23B` → `#E97861` | `#E9A23B` → `#E97861` | `#E9A23B` → `#E97861` |
 | `gradient.technology` | `#202039` → `#373C68` → `#7564E8` | `#202039` → `#373C68` → `#7564E8` | `#202039` → `#373C68` → `#7564E8` | `#202039` → `#373C68` → `#7564E8` | `#202039` → `#373C68` → `#7564E8` |
 | `gradient.success` | `#35B99A` → `#65C9A4` | `#35B99A` → `#65C9A4` | `#35B99A` → `#65C9A4` | `#35B99A` → `#65C9A4` | `#35B99A` → `#65C9A4` |
-| `grain.opacity` | `0.035` | `0.05` | `0.035` | `0.05` | `0.035` |
+| `grain.opacity` | `0.035` | `0.04` | `0.035` | `0.04` | `0.035` |
 | `grain.blend` | `multiply` | `soft-light` | `multiply` | `soft-light` | `multiply` |

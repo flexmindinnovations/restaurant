@@ -4,7 +4,7 @@ node_modules/
 *.log
 .angular/
 dist/
-!packages/*/dist/
+!packages/design-tokens/dist/
 coverage/
 .env
 .env.*

@@ -1,0 +1,49 @@
+/* Specimen layout only. Uses tokens exclusively (no raw colours except the deliberately busy backdrop). */
+body { min-height: 100vh; }
+.spec-header { position: sticky; top: var(--dosa-space-3); z-index: var(--dosa-z-nav); margin: var(--dosa-space-3) var(--dosa-space-4) 0; padding: var(--dosa-space-2) var(--dosa-space-4); display: flex; align-items: center; justify-content: space-between; gap: var(--dosa-space-4); flex-wrap: wrap; }
+.spec-brand { display: flex; align-items: center; gap: var(--dosa-space-3); }
+.spec-themes { display: flex; gap: var(--dosa-space-1); flex-wrap: wrap; padding: var(--dosa-space-1); border-radius: var(--dosa-radius-sm); background: var(--dosa-color-surface-sunken); }
+.spec-themes button { font: var(--dosa-typography-label-sm); color: var(--dosa-color-text-secondary); background: transparent; border: 0; border-radius: calc(var(--dosa-radius-sm) - 2px); padding: var(--dosa-space-1) var(--dosa-space-3); min-height: 32px; cursor: pointer; transition: background var(--dosa-motion-duration-quick) var(--dosa-motion-easing-standard), color var(--dosa-motion-duration-quick) var(--dosa-motion-easing-standard); }
+.spec-themes button:hover { color: var(--dosa-color-text-primary); background: var(--dosa-color-state-hover-overlay); }
+.spec-themes button[aria-pressed="true"] { background: var(--dosa-color-surface-primary); color: var(--dosa-color-text-primary); box-shadow: var(--dosa-shadow-1); }
+.spec-main { max-width: 1180px; margin: 0 auto; padding: var(--dosa-space-8) var(--dosa-space-4) var(--dosa-space-20); display: grid; gap: var(--dosa-space-12); }
+.spec-main section > h2 { margin-bottom: var(--dosa-space-2); }
+.spec-main section > p { margin: 0 0 var(--dosa-space-4); max-width: 72ch; }
+.spec-hero { padding: var(--dosa-space-10) var(--dosa-space-8); }
+.spec-hero h1 { margin: var(--dosa-space-2) 0 var(--dosa-space-4); max-width: 18ch; }
+.spec-lede { max-width: 60ch; margin: 0; }
+.spec-toggle { display: inline-flex; gap: var(--dosa-space-2); align-items: center; margin-bottom: var(--dosa-space-4); }
+.spec-glass-stage { position: relative; border-radius: var(--dosa-radius-xl); overflow: hidden; padding: var(--dosa-space-8); min-height: 340px; }
+/* Intentionally busy backdrop so blur is visible. */
+.spec-backdrop { position: absolute; inset: 0; background: var(--dosa-gradient-technology); }
+.spec-backdrop span { position: absolute; border-radius: 50%; }
+.spec-backdrop .b1 { width: 220px; height: 220px; left: 6%; top: 18%; background: var(--dosa-color-brand-saffron); }
+.spec-backdrop .b2 { width: 160px; height: 160px; left: 44%; top: 52%; background: var(--dosa-color-brand-mint); }
+.spec-backdrop .b3 { width: 260px; height: 260px; right: 4%; top: -10%; background: var(--dosa-color-brand-warm-coral); }
+.spec-backdrop p { position: absolute; left: 0; right: 0; bottom: 18%; text-align: center; font: 800 44px/1 var(--dosa-font-family-display); color: var(--dosa-color-brand-pearl); letter-spacing: .04em; margin: 0; }
+.spec-glass-grid { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--dosa-space-4); }
+.spec-glass-card { padding: var(--dosa-space-5); }
+.spec-glass-card p { margin: 0 0 var(--dosa-space-1); }
+.spec-grain-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dosa-space-4); }
+.spec-grain-panel { position: relative; min-height: 200px; border-radius: var(--dosa-radius-lg); padding: var(--dosa-space-4); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+.spec-zoom { display: block; height: 72px; border-radius: var(--dosa-radius-sm); background: var(--dosa-color-surface-secondary); outline: 1px solid var(--dosa-color-border-subtle); }
+.spec-zoom--grain { background-image: url("web-ui/assets/textures/paper-grain-256.webp"); background-size: 1024px 1024px; image-rendering: pixelated; background-blend-mode: normal; opacity: 0.6; }
+.spec-gradients { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--dosa-space-4); }
+.spec-gradients figure { margin: 0; }
+.spec-gradients div { height: 120px; border-radius: var(--dosa-radius-lg); }
+.spec-gradients figcaption { margin-top: var(--dosa-space-2); color: var(--dosa-color-text-secondary); }
+.spec-type { padding: var(--dosa-space-8); display: grid; gap: var(--dosa-space-3); }
+.spec-type p { margin: 0; }
+.spec-numerals { display: flex; gap: var(--dosa-space-10); flex-wrap: wrap; padding-top: var(--dosa-space-4); border-top: 1px solid var(--dosa-color-border-subtle); }
+.spec-numerals div { display: grid; gap: var(--dosa-space-1); }
+.spec-tnum { border-collapse: collapse; width: min(420px, 100%); }
+.spec-tnum caption { text-align: left; padding-bottom: var(--dosa-space-2); }
+.spec-tnum td { padding: var(--dosa-space-2) var(--dosa-space-3); border-bottom: 1px solid var(--dosa-color-border-subtle); }
+.spec-tnum td:not(:first-child) { text-align: right; }
+.spec-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: var(--dosa-space-3); }
+.spec-swatch { border-radius: var(--dosa-radius-md); overflow: hidden; border: 1px solid var(--dosa-color-border-subtle); background: var(--dosa-color-surface-primary); }
+.spec-swatch i { display: block; height: 56px; }
+.spec-swatch span { display: block; padding: var(--dosa-space-2) var(--dosa-space-3); font: var(--dosa-typography-label-sm); color: var(--dosa-color-text-secondary); word-break: break-all; }
+.spec-depth { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--dosa-space-6); }
+.spec-depth > div { height: 112px; display: grid; place-items: end start; padding: var(--dosa-space-3); }
+@media (max-width: 600px) { .spec-grain-pair { grid-template-columns: 1fr; } .spec-hero { padding: var(--dosa-space-6) var(--dosa-space-5); } .spec-backdrop p { font-size: 24px; } }

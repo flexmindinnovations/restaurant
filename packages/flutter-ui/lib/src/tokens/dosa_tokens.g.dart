@@ -197,8 +197,8 @@ abstract final class DosaOpacity {
   static const double pressOverlay = 0.12;
   /// Paper-grain layer opacity on light surfaces (3.5%).
   static const double grainLight = 0.035;
-  /// Paper-grain layer opacity on dark surfaces (5%).
-  static const double grainDark = 0.05;
+  /// Paper-grain layer opacity on dark surfaces (4%).
+  static const double grainDark = 0.04;
 }
 
 /// Layout breakpoints (logical pixels).
@@ -1000,7 +1000,7 @@ final class DosaThemeTokens {
     gradientHospitality: LinearGradient(colors: <Color>[Color(0xFFE9A23B), Color(0xFFE97861)], stops: <double>[0.0, 1.0], transform: GradientRotation(0.785398)),
     gradientTechnology: LinearGradient(colors: <Color>[Color(0xFF202039), Color(0xFF373C68), Color(0xFF7564E8)], stops: <double>[0.0, 0.55, 1.0], transform: GradientRotation(0.959931)),
     gradientSuccess: LinearGradient(colors: <Color>[Color(0xFF35B99A), Color(0xFF65C9A4)], stops: <double>[0.0, 1.0], transform: GradientRotation(0.785398)),
-    grainOpacity: 0.05,
+    grainOpacity: 0.04,
     grainBlend: 'soft-light',
   );
 
@@ -1326,7 +1326,7 @@ final class DosaThemeTokens {
     gradientHospitality: LinearGradient(colors: <Color>[Color(0xFFE9A23B), Color(0xFFE97861)], stops: <double>[0.0, 1.0], transform: GradientRotation(0.785398)),
     gradientTechnology: LinearGradient(colors: <Color>[Color(0xFF202039), Color(0xFF373C68), Color(0xFF7564E8)], stops: <double>[0.0, 0.55, 1.0], transform: GradientRotation(0.959931)),
     gradientSuccess: LinearGradient(colors: <Color>[Color(0xFF35B99A), Color(0xFF65C9A4)], stops: <double>[0.0, 1.0], transform: GradientRotation(0.785398)),
-    grainOpacity: 0.05,
+    grainOpacity: 0.04,
     grainBlend: 'soft-light',
   );
 

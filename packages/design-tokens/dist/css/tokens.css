@@ -131,7 +131,7 @@
   --dosa-opacity-hover-overlay: 0.06;
   --dosa-opacity-press-overlay: 0.12;
   --dosa-opacity-grain-light: 0.035;
-  --dosa-opacity-grain-dark: 0.05;
+  --dosa-opacity-grain-dark: 0.04;
   --dosa-size-control-sm: 32px;
   --dosa-size-control-md: 40px;
   --dosa-size-control-lg: 48px;
@@ -655,7 +655,7 @@
   --dosa-gradient-hospitality: linear-gradient(135deg, #E9A23B 0%, #E97861 100%);
   --dosa-gradient-technology: linear-gradient(145deg, #202039 0%, #373C68 55%, #7564E8 100%);
   --dosa-gradient-success: linear-gradient(135deg, #35B99A 0%, #65C9A4 100%);
-  --dosa-grain-opacity: 0.05;
+  --dosa-grain-opacity: 0.04;
   --dosa-grain-blend: soft-light;
 }
 
@@ -981,7 +981,7 @@
   --dosa-gradient-hospitality: linear-gradient(135deg, #E9A23B 0%, #E97861 100%);
   --dosa-gradient-technology: linear-gradient(145deg, #202039 0%, #373C68 55%, #7564E8 100%);
   --dosa-gradient-success: linear-gradient(135deg, #35B99A 0%, #65C9A4 100%);
-  --dosa-grain-opacity: 0.05;
+  --dosa-grain-opacity: 0.04;
   --dosa-grain-blend: soft-light;
 }
 

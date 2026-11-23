@@ -1,0 +1,38 @@
+/* Brand gradients and ambient mesh backgrounds. */
+@layer dosa.surfaces {
+  .dosa-gradient-intelligence { background-image: var(--dosa-gradient-intelligence); }
+  .dosa-gradient-hospitality { background-image: var(--dosa-gradient-hospitality); }
+  .dosa-gradient-technology { background-image: var(--dosa-gradient-technology); }
+  .dosa-gradient-success { background-image: var(--dosa-gradient-success); }
+
+  /* Gradient text: only for display sizes (≥ 36px) on light canvases, never for body copy. */
+  .dosa-gradient-text {
+    background-image: var(--dosa-gradient-intelligence);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Ambient mesh: four soft radial blobs from the theme's mesh tokens over the canvas.
+     Static (no animation), GPU-cheap, sits behind glass so the blur has something to refract.
+     Position presets via --dosa-mesh-* custom properties if a layout needs to move the light. */
+  .dosa-mesh {
+    --dosa-mesh-a-pos: 12% 8%;
+    --dosa-mesh-b-pos: 88% 14%;
+    --dosa-mesh-c-pos: 78% 92%;
+    --dosa-mesh-d-pos: 8% 86%;
+    background-color: var(--dosa-color-background-canvas);
+    background-image:
+      radial-gradient(42% 46% at var(--dosa-mesh-a-pos), var(--dosa-color-mesh-a) 0%, transparent 100%),
+      radial-gradient(38% 42% at var(--dosa-mesh-b-pos), var(--dosa-color-mesh-b) 0%, transparent 100%),
+      radial-gradient(46% 40% at var(--dosa-mesh-c-pos), var(--dosa-color-mesh-c) 0%, transparent 100%),
+      radial-gradient(36% 40% at var(--dosa-mesh-d-pos), var(--dosa-color-mesh-d) 0%, transparent 100%);
+    background-attachment: local;
+  }
+  /* Quiet variant for operational screens: only two blobs, half strength. */
+  .dosa-mesh--quiet {
+    background-image:
+      radial-gradient(40% 40% at var(--dosa-mesh-a-pos), color-mix(in srgb, var(--dosa-color-mesh-a) 50%, transparent) 0%, transparent 100%),
+      radial-gradient(40% 40% at var(--dosa-mesh-c-pos), color-mix(in srgb, var(--dosa-color-mesh-b) 50%, transparent) 0%, transparent 100%);
+  }
+}
