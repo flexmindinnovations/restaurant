@@ -48,7 +48,8 @@ Full specification and files: [ASSET_GUIDELINES.md](ASSET_GUIDELINES.md) and
 - **Wordmark.** "DOSA" set in custom-drawn geometric capitals derived from Plus Jakarta Sans
   ExtraBold, with opened apertures for small-size legibility.
 - **Clear space:** the height of the spark on all sides (≈ 0.25 × symbol height).
-- **Minimum sizes:** symbol 16px (favicon variant), lock-up 88px wide on screen.
+- **Minimum sizes:** symbol 24px; below that use the dedicated favicon (16–32px), because the
+  spark merges into the D. Lock-up 88px wide on screen.
 - **Colour versions:** full colour on light (ink + violet spark + saffron fold), reversed on dark
   (pearl + violet-400 spark + saffron fold), single-colour `currentColor`.
 - **Never:** rotate, add effects or glows, place on busy photography without a scrim, recolour the

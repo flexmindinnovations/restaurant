@@ -123,11 +123,13 @@ contains only its README with the module plan. Realtime is designed as a NestJS 
 (socket.io or native `ws`) publishing order-status events; the UI motion system already defines the
 visual states those events will drive (`order.received → accepted → preparing → ready`).
 
-### D8 — Fonts are self-hosted from @fontsource (OFL-1.1)
+### D8 — Fonts are self-hosted from the google/fonts repository (OFL-1.1)
 Inter and Plus Jakarta Sans are both licensed under the SIL Open Font License 1.1, which allows
-bundling in commercial apps. Web uses the `@fontsource-variable/*` npm packages; Flutter bundles
-the same variable `.ttf`/`woff2`-derived files as assets (see `docs/PROJECT_SETUP.md`). No runtime
-dependency on Google's CDN, which also avoids a third-party request on every page load.
+bundling in commercial apps. The variable TTFs were taken from the `google/fonts` GitHub repository
+(commit recorded in `packages/brand-assets/fonts/SOURCE.md`) and committed with their OFL texts.
+Web uses Latin `woff2` subsets made with `pyftsubset`; Flutter bundles the variable TTFs as package
+assets. No npm font package and no runtime dependency on Google's CDN, which also avoids a
+third-party request on every page load.
 
 ## 4. Dependency rules
 

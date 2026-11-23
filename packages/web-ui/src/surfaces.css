@@ -1,4 +1,4 @@
-/* Frosted glass, elevation and grain. Recipes are documented in docs/DESIGN.md §6. */
+/* Frosted glass, elevation and grain. Recipes are documented in DESIGN.md §6 (repo root). */
 @layer dosa.surfaces {
   /* ---------- Glass ----------
      Each variant = translucent tint + backdrop blur/saturation + light edge + inner top highlight

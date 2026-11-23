@@ -4,7 +4,7 @@
 //  - writes contact strips (5 frames each) to .artifacts/ for visual review
 //  - exports the poster frame as a static SVG fallback (fallbacks/<mode>/<name>.svg) with --export
 // Requires Playwright with Chromium (preinstalled in CI images; `npx playwright install chromium` locally).
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
@@ -85,6 +85,8 @@ for (const mode of ['light', 'dark']) {
         .replace(/^<svg([^>]*)>/, (m, attrs) => `<svg${attrs} role="img" aria-label="${a.title}">${title}`);
       mkdirSync(join(ROOT, 'fallbacks', mode), { recursive: true });
       writeFileSync(join(ROOT, 'fallbacks', mode, `${a.name}.svg`), svg + '\n');
+    } else if (!existsSync(join(ROOT, 'fallbacks', mode, `${a.name}.svg`))) {
+      failures++; console.error(`✗ ${mode}/${a.name}: static fallback SVG missing (run with --export)`);
     }
     console.log(`✓ ${mode}/${a.name}: ${expected} frames @ ${data.fr} fps (${(expected / data.fr).toFixed(2)} s)${a.loop ? ' loop' : ''}`);
   }
