@@ -36,8 +36,10 @@ ThemeData buildDosaTheme(DosaThemeTokens t) {
     onPrimaryContainer: t.actionSecondaryFg,
     secondary: t.brandSecondary,
     onSecondary: t.textOnSecondary,
-    secondaryContainer: t.brandSecondarySubtle,
-    onSecondaryContainer: t.brandSecondaryStrong,
+    // Tonal buttons, selected chips and navigation indicators use the violet tonal secondary
+    // action (COMPONENT_GUIDELINES §1, §3), matching the web Material bridge.
+    secondaryContainer: t.actionSecondaryBg,
+    onSecondaryContainer: t.actionSecondaryFg,
     tertiary: t.brandAccent,
     onTertiary: t.textOnSecondary,
     error: t.statusErrorSolid,
@@ -103,9 +105,9 @@ ThemeData buildDosaTheme(DosaThemeTokens t) {
     disabledColor: t.stateDisabledFg,
     extensions: <ThemeExtension<dynamic>>[DosaTheme(t)],
     filledButtonTheme: FilledButtonThemeData(
+      // Fill colours come from the scheme (primary / secondaryContainer) so FilledButton.tonal
+      // keeps its tonal look; only shared geometry and disabled colours are set here.
       style: FilledButton.styleFrom(
-        backgroundColor: t.actionPrimaryBg,
-        foregroundColor: t.actionPrimaryFg,
         disabledBackgroundColor: t.stateDisabledBg,
         disabledForegroundColor: t.stateDisabledFg,
         minimumSize: buttonSize,

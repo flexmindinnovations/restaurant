@@ -65,19 +65,20 @@ class DosaGlass extends StatelessWidget {
         color: blurEnabled ? tint : fallback,
         borderRadius: r,
         border: Border.all(color: border),
-        gradient: variant == DosaGlassVariant.premium
-            ? LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.center,
-                colors: <Color>[DosaPalette.white.withValues(alpha: 0.18), DosaPalette.white.withValues(alpha: 0)],
-              )
-            : null,
       ),
       child: DecoratedBox(
-        // 1px inner top highlight.
+        // 1px inner top highlight, plus the premium sheen. (BoxDecoration ignores `color` when a
+        // gradient is set, so the sheen must live on its own layer above the tint.)
         decoration: BoxDecoration(
           borderRadius: r,
           border: Border(top: BorderSide(color: highlight)),
+          gradient: variant == DosaGlassVariant.premium
+              ? LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.center,
+                  colors: <Color>[DosaPalette.white.withValues(alpha: 0.18), DosaPalette.white.withValues(alpha: 0)],
+                )
+              : null,
         ),
         child: Padding(
           padding: padding,
@@ -98,11 +99,40 @@ class DosaGlass extends StatelessWidget {
         ),
       );
     }
-    return DecoratedBox(
-      decoration: BoxDecoration(borderRadius: r, boxShadow: shadow),
+    // Shadows are painted only *outside* the panel, like CSS box-shadow. A plain BoxShadow would
+    // also fill the area under the translucent tint and show through as a muddy grey slab.
+    return CustomPaint(
+      painter: _OuterShadowPainter(radius: r.resolve(Directionality.maybeOf(context)), shadows: shadow),
       child: body,
     );
   }
+}
+
+class _OuterShadowPainter extends CustomPainter {
+  const _OuterShadowPainter({required this.radius, required this.shadows});
+
+  final BorderRadius radius;
+  final List<BoxShadow> shadows;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (shadows.isEmpty) return;
+    final shape = radius.toRRect(Offset.zero & size);
+    canvas.save();
+    // Keep everything except the panel itself.
+    canvas.clipPath(Path()
+      ..fillType = PathFillType.evenOdd
+      ..addRect((Offset.zero & size).inflate(256))
+      ..addRRect(shape));
+    for (final s in shadows) {
+      final paint = s.toPaint();
+      canvas.drawRRect(shape.shift(s.offset).inflate(s.spreadRadius), paint);
+    }
+    canvas.restore();
+  }
+
+  @override
+  bool shouldRepaint(_OuterShadowPainter old) => old.radius != radius || old.shadows != shadows;
 }
 
 /// Paper-grain layer. Paints a 256px tileable texture at token opacity *behind* [child].
@@ -119,9 +149,10 @@ class DosaGrain extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = DosaTheme.of(context);
     final asset = t.isDark ? 'assets/textures/paper-grain-pearl-256.webp' : 'assets/textures/paper-grain-ink-256.webp';
-    // Alpha textures carry ~2× the visual weight of the grey blend tile, so scale opacity to
-    // land on the same perceived intensity as web (3.5% light / 4% dark).
-    final opacity = (t.grainOpacity * 1.6).clamp(0.0, 1.0);
+    // Alpha textures carry more visual weight than the grey blend tile used on web, so opacity is
+    // scaled to land on a similar perceived intensity (3.5% light / 4% dark). Tuned down from
+    // 1.6 after golden review: grain must not be noticeable unless you look for it.
+    final opacity = (t.grainOpacity * 1.25).clamp(0.0, 1.0);
     return DecoratedBox(
       position: DecorationPosition.background,
       decoration: BoxDecoration(
@@ -168,7 +199,9 @@ class DosaMeshBackground extends StatelessWidget {
             blob(const Alignment(0.56, 0.84), t.meshC, 0.9),
             blob(const Alignment(-0.84, 0.72), t.meshD, 0.75),
           ];
-    Widget content = child;
+    // A transparent Material keeps ink splashes and ListTile backgrounds visible above the
+    // painted canvas (otherwise they render on the Scaffold's Material, underneath it).
+    Widget content = Material(type: MaterialType.transparency, child: child);
     if (grain) content = DosaGrain(child: content);
     return DecoratedBox(
       decoration: BoxDecoration(color: t.backgroundCanvas),

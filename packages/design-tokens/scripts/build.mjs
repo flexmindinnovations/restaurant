@@ -174,6 +174,7 @@ const jsonValue = (t) => {
   group('DosaSpace', '4px spacing scale (logical pixels).', (t) => t.path[0] === 'space', (t) => num(px(t.value)), 'double', 's');
   group('DosaRadius', 'Corner radii (logical pixels).', (t) => t.path[0] === 'radius', (t) => num(Math.min(px(t.value), 999)), 'double');
   group('DosaSize', 'Control, touch target and icon sizes.', (t) => t.path[0] === 'size' && t.type === 'dimension', (t) => num(px(t.value)), 'double');
+  group('DosaBorderWidth', 'Border and focus-ring widths (logical pixels).', (t) => t.path[0] === 'border' && t.path[1] === 'width', (t) => num(px(t.value)), 'double', 'w', 2);
   group('DosaIconStroke', 'Stroke widths for Lucide-style icons.', (t) => t.path[0] === 'size' && t.path[1] === 'icon-stroke', (t) => num(t.value), 'double');
   group('DosaOpacity', 'Opacity constants.', (t) => t.path[0] === 'opacity', (t) => num(t.value), 'double');
   group('DosaBreakpoint', 'Layout breakpoints (logical pixels).', (t) => t.path[0] === 'breakpoint', (t) => num(px(t.value)), 'double', 'bp');

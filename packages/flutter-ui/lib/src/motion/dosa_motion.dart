@@ -90,6 +90,7 @@ class DosaAnimatedIllustration extends StatelessWidget {
             errorBuilder: (context, error, stackTrace) => fallback,
           );
     return Semantics(
+      container: semanticLabel != null,
       label: semanticLabel,
       image: semanticLabel != null,
       excludeSemantics: true,

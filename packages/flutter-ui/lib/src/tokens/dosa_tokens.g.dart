@@ -182,6 +182,15 @@ abstract final class DosaSize {
   static const double icon2xl = 48.0;
 }
 
+/// Border and focus-ring widths (logical pixels).
+abstract final class DosaBorderWidth {
+  static const double hairline = 1.0;
+  /// Selected cards, inputs on focus (inner).
+  static const double strong = 1.5;
+  /// Focus ring stroke, active tab indicator.
+  static const double thick = 2.0;
+}
+
 /// Stroke widths for Lucide-style icons.
 abstract final class DosaIconStroke {
   /// Icons at 32px and above.
