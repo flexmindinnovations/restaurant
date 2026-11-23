@@ -1,0 +1,141 @@
+{
+  "space": {
+    "$type": "dimension",
+    "$description": "4px spacing foundation. Key = multiples of 4px.",
+    "0": { "$value": "0px" },
+    "0-5": { "$value": "2px", "$description": "Hairline nudges only (icon-to-text optical alignment)." },
+    "1": { "$value": "4px" },
+    "2": { "$value": "8px" },
+    "3": { "$value": "12px" },
+    "4": { "$value": "16px" },
+    "5": { "$value": "20px" },
+    "6": { "$value": "24px" },
+    "8": { "$value": "32px" },
+    "10": { "$value": "40px" },
+    "12": { "$value": "48px" },
+    "16": { "$value": "64px" },
+    "20": { "$value": "80px" },
+    "24": { "$value": "96px" }
+  },
+  "radius": {
+    "$type": "dimension",
+    "none": { "$value": "0px" },
+    "xs": { "$value": "4px", "$description": "Checkbox, inline tags, chart bars." },
+    "sm": { "$value": "8px", "$description": "Small controls: buttons, inputs, chips, tooltips." },
+    "md": { "$value": "12px", "$description": "Standard cards, menus, toasts, table containers." },
+    "lg": { "$value": "18px", "$description": "Feature panels, dialogs, food cards, bottom sheets." },
+    "xl": { "$value": "24px", "$description": "Large hero panels, onboarding cards." },
+    "full": { "$value": "9999px", "$description": "Pills, avatars, switches, FAB." }
+  },
+  "border": {
+    "width": {
+      "$type": "dimension",
+      "hairline": { "$value": "1px" },
+      "strong": { "$value": "1.5px", "$description": "Selected cards, inputs on focus (inner)." },
+      "thick": { "$value": "2px", "$description": "Focus ring stroke, active tab indicator." }
+    }
+  },
+  "focus": {
+    "ring": {
+      "$type": "dimension",
+      "width": { "$value": "2px" },
+      "offset": { "$value": "2px" }
+    }
+  },
+  "opacity": {
+    "$type": "number",
+    "disabled": { "$value": 0.42, "$description": "Applied to whole disabled controls that have no dedicated disabled colours (icons, illustrations)." },
+    "scrim": { "$value": 0.48, "$description": "Modal/drawer scrim over content (light themes)." },
+    "scrim-dark": { "$value": 0.64 },
+    "hover-overlay": { "$value": 0.06, "$description": "State layer on hover." },
+    "press-overlay": { "$value": 0.12, "$description": "State layer on press." },
+    "grain-light": { "$value": 0.035, "$description": "Paper-grain layer opacity on light surfaces (3.5%)." },
+    "grain-dark": { "$value": 0.05, "$description": "Paper-grain layer opacity on dark surfaces (5%)." }
+  },
+  "size": {
+    "$type": "dimension",
+    "control": {
+      "sm": { "$value": "32px", "$description": "Dense admin toolbars, table row actions." },
+      "md": { "$value": "40px", "$description": "Default web control height." },
+      "lg": { "$value": "48px", "$description": "Default mobile control height." },
+      "xl": { "$value": "56px", "$description": "Staff mobile primary actions, checkout CTA." }
+    },
+    "touch": {
+      "min": { "$value": "44px", "$description": "Minimum hit target on any touch device." },
+      "staff": { "$value": "48px", "$description": "Minimum hit target in the staff app (gloves, speed)." }
+    },
+    "icon": {
+      "xs": { "$value": "12px" },
+      "sm": { "$value": "16px" },
+      "md": { "$value": "20px", "$description": "Default in dense web UI." },
+      "lg": { "$value": "24px", "$description": "Default on mobile and in navigation." },
+      "xl": { "$value": "32px" },
+      "2xl": { "$value": "48px", "$description": "Empty-state spot icons." }
+    },
+    "icon-stroke": {
+      "$type": "number",
+      "fine": { "$value": 1.5, "$description": "Icons at 32px and above." },
+      "default": { "$value": 1.75, "$description": "Icons at 16–24px (Lucide geometry, slightly refined stroke)." },
+      "bold": { "$value": 2, "$description": "Icons at 12–14px and active navigation state." }
+    }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "xs": { "$value": "0px", "$description": "Phones." },
+    "sm": { "$value": "600px", "$description": "Large phones, small tablets." },
+    "md": { "$value": "905px", "$description": "Tablets landscape, small laptops." },
+    "lg": { "$value": "1240px", "$description": "Laptops. Admin sidebar expanded." },
+    "xl": { "$value": "1440px", "$description": "Desktop." },
+    "2xl": { "$value": "1920px", "$description": "Large monitors, monitoring walls." }
+  },
+  "grid": {
+    "columns": {
+      "$type": "number",
+      "xs": { "$value": 4 }, "sm": { "$value": 8 }, "md": { "$value": 12 }, "lg": { "$value": 12 }, "xl": { "$value": 12 }
+    },
+    "gutter": {
+      "$type": "dimension",
+      "xs": { "$value": "16px" }, "sm": { "$value": "16px" }, "md": { "$value": "24px" }, "lg": { "$value": "24px" }, "xl": { "$value": "32px" }
+    },
+    "margin": {
+      "$type": "dimension",
+      "xs": { "$value": "16px" }, "sm": { "$value": "24px" }, "md": { "$value": "32px" }, "lg": { "$value": "32px" }, "xl": { "$value": "40px" }
+    },
+    "max-content": { "$type": "dimension", "$value": "1600px", "$description": "Max width of admin content column." }
+  },
+  "z": {
+    "$type": "number",
+    "base": { "$value": 0 },
+    "raised": { "$value": 10, "$description": "Sticky table headers, card hover lift." },
+    "sticky": { "$value": 100 },
+    "nav": { "$value": 200, "$description": "Top bar, sidebar, bottom navigation." },
+    "dropdown": { "$value": 1000 },
+    "drawer": { "$value": 1100 },
+    "modal": { "$value": 1200 },
+    "popover": { "$value": 1300 },
+    "toast": { "$value": 1400 },
+    "tooltip": { "$value": 1500 }
+  },
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "instant": { "$value": "80ms", "$description": "Checkbox tick, ripple start." },
+      "fast": { "$value": "120ms", "$description": "Hover, press feedback (lower bound)." },
+      "quick": { "$value": "160ms", "$description": "Hover, press feedback (default)." },
+      "moderate": { "$value": "200ms", "$description": "Navigation, tab change, dropdown open." },
+      "base": { "$value": "240ms", "$description": "Modal / drawer enter, page transition." },
+      "slow": { "$value": "280ms", "$description": "Large surface enter (bottom sheet)." },
+      "deliberate": { "$value": "400ms", "$description": "Order status change emphasis." },
+      "chart": { "$value": "600ms", "$description": "Chart initial draw (once)." },
+      "ambient": { "$value": "1200ms", "$description": "Skeleton shimmer cycle, live pulse." }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": [0.2, 0, 0, 1], "$description": "Default for anything that moves on screen." },
+      "decelerate": { "$value": [0, 0, 0, 1], "$description": "Elements entering." },
+      "accelerate": { "$value": [0.3, 0, 1, 1], "$description": "Elements leaving (use shorter duration)." },
+      "emphasized": { "$value": [0.05, 0.7, 0.1, 1], "$description": "Status changes, success moments." },
+      "linear": { "$value": [0, 0, 1, 1], "$description": "Progress, shimmer, rotation only." }
+    }
+  }
+}

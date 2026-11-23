@@ -1,0 +1,284 @@
+{
+  "color.brand.primary": "#7564E8",
+  "color.brand.primary-strong": "#5C4AC3",
+  "color.brand.primary-subtle": "#E9E9FF",
+  "color.brand.secondary": "#E9A23B",
+  "color.brand.secondary-strong": "#8B5200",
+  "color.brand.secondary-subtle": "#FFF4DD",
+  "color.brand.accent": "#E97861",
+  "color.brand.accent-subtle": "#FFEFE9",
+  "color.brand.ink": "#202039",
+  "color.background.canvas": "#F7F5F0",
+  "color.background.subtle": "#ECEBF1",
+  "color.surface.primary": "#FFFFFF",
+  "color.surface.secondary": "#ECEBF1",
+  "color.surface.elevated": "#FFFFFF",
+  "color.surface.sunken": "#EBEBF3",
+  "color.surface.inverse": "#202039",
+  "color.surface.brand": "#F3F4FF",
+  "color.surface.scrim": "rgb(20 19 42 / 0.48)",
+  "color.text.primary": "#202039",
+  "color.text.secondary": "#4F5068",
+  "color.text.tertiary": "#86879B",
+  "color.text.disabled": "#A2A3B4",
+  "color.text.inverse": "#F7F5F0",
+  "color.text.on-primary": "#FFFFFF",
+  "color.text.on-secondary": "#202039",
+  "color.text.link": "#5C4AC3",
+  "color.text.brand": "#5C4AC3",
+  "color.icon.primary": "#202039",
+  "color.icon.secondary": "#66677A",
+  "color.icon.brand": "#7564E8",
+  "color.icon.disabled": "#BEBFCC",
+  "color.border.subtle": "#D7D8E2",
+  "color.border.default": "#A2A3B4",
+  "color.border.strong": "#86879B",
+  "color.border.brand": "#7564E8",
+  "color.border.inverse": "rgb(255 255 255 / 0.16)",
+  "color.focus.ring": "#7564E8",
+  "color.focus.ring-halo": "rgb(117 100 232 / 0.24)",
+  "color.action.primary.bg": "#6857D5",
+  "color.action.primary.bg-hover": "#5C4AC3",
+  "color.action.primary.bg-active": "#4530A0",
+  "color.action.primary.fg": "#FFFFFF",
+  "color.action.secondary.bg": "#E9E9FF",
+  "color.action.secondary.bg-hover": "#D6D6FF",
+  "color.action.secondary.bg-active": "#BFBEFF",
+  "color.action.secondary.fg": "#4530A0",
+  "color.action.tertiary.bg": "rgb(117 100 232 / 0)",
+  "color.action.tertiary.bg-hover": "rgb(117 100 232 / 0.08)",
+  "color.action.tertiary.bg-active": "rgb(117 100 232 / 0.14)",
+  "color.action.tertiary.fg": "#5C4AC3",
+  "color.action.neutral.bg": "#FFFFFF",
+  "color.action.neutral.bg-hover": "#F6F6FD",
+  "color.action.neutral.bg-active": "#EBEBF3",
+  "color.action.neutral.fg": "#202039",
+  "color.action.destructive.bg": "#A14230",
+  "color.action.destructive.bg-hover": "#802918",
+  "color.action.destructive.bg-active": "#600E00",
+  "color.action.destructive.fg": "#FFFFFF",
+  "color.action.highlight.bg": "#E9A23B",
+  "color.action.highlight.bg-hover": "#C9871E",
+  "color.action.highlight.bg-active": "#A96B00",
+  "color.action.highlight.fg": "#202039",
+  "color.state.disabled-bg": "#EBEBF3",
+  "color.state.disabled-fg": "#A2A3B4",
+  "color.state.disabled-border": "#D7D8E2",
+  "color.state.hover-overlay": "rgb(32 32 57 / 0.05)",
+  "color.state.press-overlay": "rgb(32 32 57 / 0.1)",
+  "color.state.selected-bg": "#F3F4FF",
+  "color.status.success.fg": "#006C54",
+  "color.status.success.bg": "#E4FEF5",
+  "color.status.success.border": "#A9E6D3",
+  "color.status.success.solid": "#00785F",
+  "color.status.success.on-solid": "#FFFFFF",
+  "color.status.warning.fg": "#8B5200",
+  "color.status.warning.bg": "#FFF4DD",
+  "color.status.warning.border": "#FFD6A3",
+  "color.status.warning.solid": "#E9A23B",
+  "color.status.warning.on-solid": "#202039",
+  "color.status.error.fg": "#A14230",
+  "color.status.error.bg": "#FFEFE9",
+  "color.status.error.border": "#FFCFC2",
+  "color.status.error.solid": "#A14230",
+  "color.status.error.on-solid": "#FFFFFF",
+  "color.status.info.fg": "#1D60A3",
+  "color.status.info.bg": "#E9F9FF",
+  "color.status.info.border": "#B9D9FE",
+  "color.status.info.solid": "#1D60A3",
+  "color.status.info.on-solid": "#FFFFFF",
+  "color.status.neutral.fg": "#66677A",
+  "color.status.neutral.bg": "#EBEBF3",
+  "color.status.neutral.border": "#D7D8E2",
+  "color.status.neutral.solid": "#4F5068",
+  "color.status.neutral.on-solid": "#FFFFFF",
+  "color.status.live": "#159F82",
+  "color.status.critical": "#C45C47",
+  "color.order.received": "#276BB1",
+  "color.order.accepted": "#6857D5",
+  "color.order.preparing": "#A96B00",
+  "color.order.ready": "#00785F",
+  "color.order.served": "#696A80",
+  "color.order.cancelled": "#A14230",
+  "color.order.delayed": "#C45C47",
+  "color.chart.categorical.1": "#7564E8",
+  "color.chart.categorical.2": "#E9A23B",
+  "color.chart.categorical.3": "#159F82",
+  "color.chart.categorical.4": "#E97861",
+  "color.chart.categorical.5": "#3C83CE",
+  "color.chart.categorical.6": "#E9789B",
+  "color.chart.categorical.7": "#4F5068",
+  "color.chart.categorical.8": "#BFBEFF",
+  "color.chart.sequential.1": "#E9E9FF",
+  "color.chart.sequential.2": "#D6D6FF",
+  "color.chart.sequential.3": "#A6A2FF",
+  "color.chart.sequential.4": "#7564E8",
+  "color.chart.sequential.5": "#4530A0",
+  "color.chart.diverging.negative": "#C45C47",
+  "color.chart.diverging.neutral": "#D7D8E2",
+  "color.chart.diverging.positive": "#00846A",
+  "color.chart.grid": "rgb(215 216 226 / 0.6)",
+  "color.chart.axis": "#66677A",
+  "color.glass.subtle-tint": "rgb(255 255 255 / 0.56)",
+  "color.glass.standard-tint": "rgb(255 255 255 / 0.66)",
+  "color.glass.premium-tint": "rgb(247 245 240 / 0.6)",
+  "color.glass.dark-tint": "rgb(32 32 57 / 0.62)",
+  "color.glass.border": "rgb(255 255 255 / 0.62)",
+  "color.glass.border-dark": "rgb(255 255 255 / 0.1)",
+  "color.glass.highlight": "rgb(255 255 255 / 0.8)",
+  "color.glass.highlight-dark": "rgb(255 255 255 / 0.08)",
+  "color.glass.fallback": "rgb(255 255 255 / 0.94)",
+  "color.glass.fallback-dark": "rgb(32 32 57 / 0.96)",
+  "color.shadow.key": "rgb(32 32 57 / 0.08)",
+  "color.shadow.ambient": "rgb(32 32 57 / 0.05)",
+  "color.shadow.deep": "rgb(20 19 42 / 0.14)",
+  "color.shadow.brand": "rgb(117 100 232 / 0.22)",
+  "color.mesh.a": "rgb(191 190 255 / 0.42)",
+  "color.mesh.b": "rgb(255 214 163 / 0.5)",
+  "color.mesh.c": "rgb(255 194 211 / 0.38)",
+  "color.mesh.d": "rgb(169 230 211 / 0.32)",
+  "shadow.0": [],
+  "shadow.1": [
+    {
+      "color": "rgb(32 32 57 / 0.08)",
+      "offsetX": "0px",
+      "offsetY": "1px",
+      "blur": "2px",
+      "spread": "0px"
+    },
+    {
+      "color": "rgb(32 32 57 / 0.05)",
+      "offsetX": "0px",
+      "offsetY": "1px",
+      "blur": "3px",
+      "spread": "0px"
+    }
+  ],
+  "shadow.2": [
+    {
+      "color": "rgb(32 32 57 / 0.08)",
+      "offsetX": "0px",
+      "offsetY": "2px",
+      "blur": "6px",
+      "spread": "-1px"
+    },
+    {
+      "color": "rgb(32 32 57 / 0.05)",
+      "offsetX": "0px",
+      "offsetY": "6px",
+      "blur": "16px",
+      "spread": "-4px"
+    }
+  ],
+  "shadow.3": [
+    {
+      "color": "rgb(32 32 57 / 0.08)",
+      "offsetX": "0px",
+      "offsetY": "4px",
+      "blur": "10px",
+      "spread": "-2px"
+    },
+    {
+      "color": "rgb(20 19 42 / 0.14)",
+      "offsetX": "0px",
+      "offsetY": "16px",
+      "blur": "32px",
+      "spread": "-8px"
+    }
+  ],
+  "shadow.4": [
+    {
+      "color": "rgb(32 32 57 / 0.08)",
+      "offsetX": "0px",
+      "offsetY": "8px",
+      "blur": "16px",
+      "spread": "-4px"
+    },
+    {
+      "color": "rgb(20 19 42 / 0.14)",
+      "offsetX": "0px",
+      "offsetY": "28px",
+      "blur": "56px",
+      "spread": "-12px"
+    }
+  ],
+  "shadow.brand": [
+    {
+      "color": "rgb(117 100 232 / 0.22)",
+      "offsetX": "0px",
+      "offsetY": "10px",
+      "blur": "28px",
+      "spread": "-8px"
+    }
+  ],
+  "glass.blur.subtle": "12px",
+  "glass.blur.standard": "20px",
+  "glass.blur.premium": "32px",
+  "glass.blur.dark": "24px",
+  "glass.saturate.subtle": 1.4,
+  "glass.saturate.standard": 1.6,
+  "glass.saturate.premium": 1.8,
+  "glass.saturate.dark": 1.3,
+  "gradient.intelligence": {
+    "angle": 135,
+    "stops": [
+      {
+        "color": "#7564E8",
+        "position": 0
+      },
+      {
+        "color": "#A18AEF",
+        "position": 0.5
+      },
+      {
+        "color": "#E9789B",
+        "position": 1
+      }
+    ]
+  },
+  "gradient.hospitality": {
+    "angle": 135,
+    "stops": [
+      {
+        "color": "#E9A23B",
+        "position": 0
+      },
+      {
+        "color": "#E97861",
+        "position": 1
+      }
+    ]
+  },
+  "gradient.technology": {
+    "angle": 145,
+    "stops": [
+      {
+        "color": "#202039",
+        "position": 0
+      },
+      {
+        "color": "#373C68",
+        "position": 0.55
+      },
+      {
+        "color": "#7564E8",
+        "position": 1
+      }
+    ]
+  },
+  "gradient.success": {
+    "angle": 135,
+    "stops": [
+      {
+        "color": "#35B99A",
+        "position": 0
+      },
+      {
+        "color": "#65C9A4",
+        "position": 1
+      }
+    ]
+  },
+  "grain.opacity": 0.035,
+  "grain.blend": "multiply"
+}

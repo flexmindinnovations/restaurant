@@ -1,0 +1,30 @@
+name: dosa_ui
+description: DOSA design system for Flutter — generated tokens, themes, glass and paper-grain surfaces.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.13.0
+  flutter: ">=3.47.0"
+
+dependencies:
+  cupertino_ui: ^1.1.7
+  flutter:
+    sdk: flutter
+  material_ui: ^1.11.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/textures/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: fonts/InterVariable.ttf
+    - family: PlusJakartaSans
+      fonts:
+        - asset: fonts/PlusJakartaSansVariable.ttf

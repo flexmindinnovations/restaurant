@@ -1,0 +1,11 @@
+{
+  "$extends": "light",
+  "$description": "Staff mobile default. Light, higher-contrast borders and status fills for speed and glanceability.",
+  "color": {
+    "border": {
+      "subtle": { "$value": "{color.ink.200}" },
+      "default": { "$value": "{color.ink.400}" }
+    },
+    "text": { "secondary": { "$value": "{color.ink.700}", "$description": "Darker than admin for glanceability in bright dining rooms." } }
+  }
+}

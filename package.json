@@ -1,0 +1,22 @@
+{
+  "name": "dosa",
+  "private": true,
+  "description": "DOSA restaurant platform monorepo: shared design system, brand assets and applications.",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "tokens:build": "pnpm --filter @dosa/design-tokens build",
+    "tokens:check": "pnpm --filter @dosa/design-tokens check",
+    "assets:validate": "pnpm --filter @dosa/brand-assets validate",
+    "motion:validate": "pnpm --filter @dosa/motion-assets validate",
+    "web-ui:build": "pnpm --filter @dosa/web-ui build",
+    "docs:build": "pnpm --filter @dosa/documentation build",
+    "admin:start": "pnpm --filter @dosa/admin-web start",
+    "admin:build": "pnpm --filter @dosa/admin-web build",
+    "admin:test": "pnpm --filter @dosa/admin-web test",
+    "admin:lint": "pnpm --filter @dosa/admin-web lint",
+    "validate": "pnpm tokens:check && pnpm assets:validate && pnpm motion:validate && pnpm web-ui:build && pnpm admin:lint && pnpm admin:build && pnpm admin:test"
+  }
+}

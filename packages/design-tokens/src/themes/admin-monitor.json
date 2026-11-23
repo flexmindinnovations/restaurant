@@ -1,0 +1,8 @@
+{
+  "$extends": "dark",
+  "$description": "Web admin CCTV and advanced monitoring. Midnight/charcoal, high-contrast controls, Mint live, Coral critical.",
+  "color": {
+    "background": { "canvas": { "$value": "{color.ink.975}" } },
+    "surface": { "primary": { "$value": "{color.ink.950}" }, "secondary": { "$value": "{color.ink.900}" } }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$extends": "light",
+  "$description": "Customer mobile. Warm light: pearl-warm surfaces, Saffron/Coral appetite accents, Violet kept for selection and focus.",
+  "color": {
+    "background": {
+      "canvas": { "$value": "{color.brand.pearl}" },
+      "subtle": { "$value": "{color.saffron.50}" }
+    },
+    "surface": {
+      "secondary": { "$value": "{color.saffron.50}" },
+      "sunken": { "$value": "{color.brand.cloud}" },
+      "brand": { "$value": "{color.coral.50}" }
+    },
+    "border": { "subtle": { "$value": "{color.saffron.200}", "$extensions": { "dosa.alpha": 0.6 } } },
+    "state": { "selected-bg": { "$value": "{color.saffron.50}" } },
+    "mesh": {
+      "a": { "$value": "{color.saffron.200}", "$extensions": { "dosa.alpha": 0.55 } },
+      "b": { "$value": "{color.coral.200}", "$extensions": { "dosa.alpha": 0.42 } },
+      "c": { "$value": "{color.rose.100}", "$extensions": { "dosa.alpha": 0.5 } },
+      "d": { "$value": "{color.violet.200}", "$extensions": { "dosa.alpha": 0.22 } }
+    }
+  }
+}

@@ -33,3 +33,6 @@ Thumbs.db
 
 # Verification artefacts
 .artifacts/
+
+# Dart library packages do not commit lockfiles
+packages/flutter-ui/pubspec.lock

@@ -1,0 +1,302 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "display": {
+        "$value": [
+          "Plus Jakarta Sans",
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif"
+        ],
+        "$description": "Display and headings only. Never for tables, forms or operational data."
+      },
+      "body": {
+        "$value": [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif"
+        ],
+        "$description": "Body, interface, operational data, numerals."
+      },
+      "mono": {
+        "$value": [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Consolas",
+          "monospace"
+        ],
+        "$description": "Code, IDs in developer tooling. Not used in customer UI."
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": {
+        "$value": 400
+      },
+      "medium": {
+        "$value": 500
+      },
+      "semibold": {
+        "$value": 600
+      },
+      "bold": {
+        "$value": 700
+      },
+      "extrabold": {
+        "$value": 800
+      }
+    },
+    "feature": {
+      "$type": "string",
+      "tabular": {
+        "$value": "'tnum' 1",
+        "$description": "Tabular numerals: revenue, prices, order numbers, timers, quantities, analytics. Both families ship lining figures by default."
+      },
+      "proportional": {
+        "$value": "'pnum' 1",
+        "$description": "Default proportional numerals in running text."
+      },
+      "disambiguate": {
+        "$value": "'tnum' 1, 'zero' 1, 'cv05' 1, 'cv08' 1",
+        "$description": "Inter only. Order codes, table IDs, voucher codes: slashed zero, tailed l, serifed I so 0/O and 1/l/I never collide."
+      }
+    }
+  },
+  "typography": {
+    "$type": "typography",
+    "$description": "Composite text styles. Sizes in px (web) = logical px (Flutter). lineHeight is a unitless multiplier rounded to the 4px grid. letterSpacing in em.",
+    "display": {
+      "xl": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontWeight": "{font.weight.extrabold}",
+          "fontSize": "56px",
+          "lineHeight": 1.1428,
+          "letterSpacing": "-0.025em"
+        },
+        "$description": "64px line. Marketing-grade hero titles only (onboarding, empty hero). Mobile: use display.lg."
+      },
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "44px",
+          "lineHeight": 1.1818,
+          "letterSpacing": "-0.022em"
+        },
+        "$description": "52px line."
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "36px",
+          "lineHeight": 1.2222,
+          "letterSpacing": "-0.02em"
+        },
+        "$description": "44px line. Largest size on mobile."
+      }
+    },
+    "heading": {
+      "h1": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "30px",
+          "lineHeight": 1.2,
+          "letterSpacing": "-0.018em"
+        },
+        "$description": "36px line. One per page: page title."
+      },
+      "h2": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "24px",
+          "lineHeight": 1.3333,
+          "letterSpacing": "-0.014em"
+        },
+        "$description": "32px line. Section titles."
+      },
+      "h3": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "20px",
+          "lineHeight": 1.4,
+          "letterSpacing": "-0.01em"
+        },
+        "$description": "28px line. Card and panel titles."
+      },
+      "h4": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "17px",
+          "lineHeight": 1.4118,
+          "letterSpacing": "-0.006em"
+        },
+        "$description": "24px line. Sub-sections, dialog titles on mobile."
+      },
+      "h5": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "15px",
+          "lineHeight": 1.3333,
+          "letterSpacing": "-0.003em"
+        },
+        "$description": "20px line. Group headers inside dense UI (Inter for density)."
+      }
+    },
+    "body": {
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "16px",
+          "lineHeight": 1.5,
+          "letterSpacing": "-0.006em"
+        },
+        "$description": "24px line. Default body on mobile; long-form on web."
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "14px",
+          "lineHeight": 1.4286,
+          "letterSpacing": "-0.004em"
+        },
+        "$description": "20px line. Default body in the web admin."
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "13px",
+          "lineHeight": 1.3846,
+          "letterSpacing": "0em"
+        },
+        "$description": "18px line. Table cells (dense), helper text."
+      }
+    },
+    "label": {
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "15px",
+          "lineHeight": 1.3333,
+          "letterSpacing": "-0.004em"
+        },
+        "$description": "20px line. Large buttons, staff-mobile primary actions."
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "14px",
+          "lineHeight": 1.4286,
+          "letterSpacing": "-0.002em"
+        },
+        "$description": "20px line. Buttons, tabs, inputs labels."
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "12px",
+          "lineHeight": 1.3333,
+          "letterSpacing": "0.004em"
+        },
+        "$description": "16px line. Badges, chips, compact controls."
+      }
+    },
+    "meta": {
+      "caption": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "12px",
+          "lineHeight": 1.3333,
+          "letterSpacing": "0.004em"
+        },
+        "$description": "16px line. Timestamps, footnotes, image captions."
+      },
+      "overline": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "11px",
+          "lineHeight": 1.4545,
+          "letterSpacing": "0.08em"
+        },
+        "$description": "16px line. UPPERCASE eyebrow labels. Never more than 3 words."
+      }
+    },
+    "numeric": {
+      "$description": "All numeric styles must be rendered with font.feature.tabular.",
+      "hero": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "36px",
+          "lineHeight": 1.1111,
+          "letterSpacing": "-0.03em"
+        },
+        "$description": "40px line. KPI hero value (revenue today)."
+      },
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "24px",
+          "lineHeight": 1.3333,
+          "letterSpacing": "-0.02em"
+        },
+        "$description": "32px line. Metric cards, order totals."
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "14px",
+          "lineHeight": 1.4286,
+          "letterSpacing": "0em"
+        },
+        "$description": "20px line. Prices, quantities, table numbers."
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "12px",
+          "lineHeight": 1.3333,
+          "letterSpacing": "0.004em"
+        },
+        "$description": "16px line. Inline counts, chart axes."
+      },
+      "timer": {
+        "$value": {
+          "fontFamily": "{font.family.body}",
+          "fontWeight": "{font.weight.bold}",
+          "fontSize": "28px",
+          "lineHeight": 1.1428,
+          "letterSpacing": "-0.02em"
+        },
+        "$description": "32px line. Kitchen and order timers (mm:ss)."
+      }
+    }
+  }
+}
